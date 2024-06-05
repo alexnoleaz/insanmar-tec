@@ -8,4 +8,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\InsanmarTec.Application\InsanmarTec.Application.csproj" />
+    <ProjectReference Include="..\InsanmarTec.Domain\InsanmarTec.Domain.csproj" />
+    <ProjectReference Include="..\InsanmarTec.Infrastructure\InsanmarTec.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
