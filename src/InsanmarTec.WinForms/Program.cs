@@ -1,3 +1,6 @@
+using InsanmarTec.Domain;
+using InsanmarTec.Infrastructure;
+using InsanmarTec.Infrastructure.Shared.Dependency;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,7 +30,10 @@ namespace InsanmarTec.WinForms
                         .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true))
                 .ConfigureServices((context, services) =>
                 {
-                    services.AddTransient<Form1>();
+                    services.Install(context.Configuration);
+                    services.AddAutomaticRegistered(typeof(InfrastructureModule).Assembly);
+                    services.AddAutomaticRegistered(typeof(DomainModule).Assembly);
+                    services.AddAutomaticRegistered(typeof(Startup).Assembly);
                     new Startup(context.Configuration).ConfigureServices(services);
                 });
 
