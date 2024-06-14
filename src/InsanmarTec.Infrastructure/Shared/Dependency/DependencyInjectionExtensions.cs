@@ -1,5 +1,7 @@
-﻿using InsanmarTec.Domain.Shared.Dependency;
+﻿using InsanmarTec.Domain.Shared.Datasources;
+using InsanmarTec.Domain.Shared.Dependency;
 using InsanmarTec.Infrastructure.Shared.Persistence;
+using InsanmarTec.Infrastructure.Shared.Persistence.Datasources;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -49,6 +51,8 @@ namespace InsanmarTec.Infrastructure.Shared.Dependency
         {
             services.AddDbContext<InsanmarTecDbContext>(options =>
                 options.UseSqlServer($"{configuration["Mssql:ConnectionString"]} Database={configuration["Mssql:DatabaseName"]};"));
+            services.AddTransient(typeof(IDatasource<,>), typeof(Datasource<,>));
+            services.AddTransient(typeof(IDatasource<>), typeof(Datasource<>));
 
             return services;
         }
