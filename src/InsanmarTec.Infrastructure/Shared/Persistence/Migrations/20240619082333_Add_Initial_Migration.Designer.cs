@@ -4,6 +4,7 @@ using InsanmarTec.Infrastructure.Shared.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InsanmarTec.Infrastructure.Shared.Persistence.Migrations
 {
     [DbContext(typeof(InsanmarTecDbContext))]
-    partial class InsanmarTecDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240619082333_Add_Initial_Migration")]
+    partial class Add_Initial_Migration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

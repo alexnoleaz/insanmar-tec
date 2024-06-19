@@ -3,7 +3,6 @@ using InsanmarTec.Application.Shared.Results;
 using InsanmarTec.Domain.Brands;
 using InsanmarTec.Domain.Shared;
 using InsanmarTec.Domain.Shared.Dependency;
-using InsanmarTec.Domain.Shared.Entities;
 
 namespace InsanmarTec.Application.Brands.Features
 {
@@ -18,7 +17,7 @@ namespace InsanmarTec.Application.Brands.Features
             _objectMapper = objectMapper;
         }
 
-        public async Task<Result<IEnumerable<BrandDto>>> ExecuteAsync()
+        public async Task<Result<IEnumerable<BrandDto>>> Execute()
         {
             try
             {
@@ -26,10 +25,6 @@ namespace InsanmarTec.Application.Brands.Features
                 var brandsDto = _objectMapper.Map<List<BrandDto>>(brandsDb);
 
                 return Result<IEnumerable<BrandDto>>.Success(brandsDto);
-            }
-            catch (EntityNotFoundException ex)
-            {
-                return Result<IEnumerable<BrandDto>>.Failure(ex.Message);
             }
             catch (Exception ex)
             {

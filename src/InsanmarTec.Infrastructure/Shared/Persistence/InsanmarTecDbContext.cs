@@ -1,4 +1,6 @@
-﻿using InsanmarTec.Domain.Brands;
+﻿using InsanmarTec.Domain.Auth.Roles;
+using InsanmarTec.Domain.Auth.Users;
+using InsanmarTec.Domain.Brands;
 using Microsoft.EntityFrameworkCore;
 
 namespace InsanmarTec.Infrastructure.Shared.Persistence
@@ -23,5 +25,7 @@ namespace InsanmarTec.Infrastructure.Shared.Persistence
 
         // Define a DbSet for each entity of the application
         public DbSet<Brand> Brands => Set<Brand>();
+        public DbSet<Role> Roles => Set<Role>();
+        public DbSet<User> Users => Set<User>();
     }
 }

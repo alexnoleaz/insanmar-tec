@@ -18,7 +18,7 @@ namespace InsanmarTec.Application.Brands.Features
             _objectMapper = objectMapper;
         }
 
-        public async Task<Result<BrandDto>> ExecuteAsync(UpdateBrandDto input)
+        public async Task<Result<BrandDto>> Execute(UpdateBrandDto input)
         {
             var result = BrandValidator.Validate(input);
             if (!result.IsValid)
@@ -26,10 +26,9 @@ namespace InsanmarTec.Application.Brands.Features
 
             try
             {
-                var brand = _objectMapper.Map<Brand>(input);
-                var brandDb = await _brandRepository.GetAsync(brand.Id);
+                var brandDb = await _brandRepository.GetAsync(input.Id);
                 var brandDto = _objectMapper.Map<BrandDto>(
-                    await _brandRepository.UpdateAsync(brandDb)
+                    await _brandRepository.UpdateAsync(_objectMapper.Map(input, brandDb))
                 );
 
                 return Result<BrandDto>.Success(brandDto);
