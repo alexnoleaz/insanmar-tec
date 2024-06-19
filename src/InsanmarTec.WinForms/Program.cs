@@ -3,6 +3,7 @@ using InsanmarTec.Application;
 using InsanmarTec.Domain.Shared.Datasources;
 using InsanmarTec.Infrastructure.Shared.Persistence;
 using InsanmarTec.Infrastructure.Shared.Persistence.Datasources;
+using InsanmarTec.WinForms.Views;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,7 +23,7 @@ namespace InsanmarTec.WinForms
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             System.Windows.Forms.Application.Run(
-                CreateHostBuilder().Build().Services.GetRequiredService<Form1>()
+                CreateHostBuilder().Build().Services.GetRequiredService<SignInView>()
             );
         }
 

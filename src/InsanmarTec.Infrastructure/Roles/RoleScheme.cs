@@ -1,4 +1,4 @@
-﻿using InsanmarTec.Domain.Roles;
+﻿using InsanmarTec.Domain.Auth.Roles;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

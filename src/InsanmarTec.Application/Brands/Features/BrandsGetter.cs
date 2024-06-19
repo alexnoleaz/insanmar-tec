@@ -17,7 +17,7 @@ namespace InsanmarTec.Application.Brands.Features
             _objectMapper = objectMapper;
         }
 
-        public async Task<Result<IEnumerable<BrandDto>>> ExecuteAsync()
+        public async Task<Result<IEnumerable<BrandDto>>> Execute()
         {
             try
             {

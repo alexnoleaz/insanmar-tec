@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using InsanmarTec.Application.Roles.Dtos;
-using InsanmarTec.Domain.Roles;
+using InsanmarTec.Domain.Auth.Roles;
 
 namespace InsanmarTec.Application.Roles
 {
@@ -9,7 +9,6 @@ namespace InsanmarTec.Application.Roles
         public RoleMapProfile()
         {
             CreateMap<CreateRoleDto, Role>();
-            CreateMap<UpdateRoleDto, Role>();
             CreateMap<Role, RoleDto>();
         }
     }

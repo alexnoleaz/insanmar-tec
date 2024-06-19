@@ -18,7 +18,7 @@ namespace InsanmarTec.Application.Brands.Features
             _objectMapper = objectMapper;
         }
 
-        public async Task<Result<BrandDto>> ExecuteAsync(UpdateBrandDto input)
+        public async Task<Result<BrandDto>> Execute(UpdateBrandDto input)
         {
             var result = BrandValidator.Validate(input);
             if (!result.IsValid)

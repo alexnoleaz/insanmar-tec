@@ -1,6 +1,6 @@
 ﻿using InsanmarTec.Application.Roles.Dtos;
 using InsanmarTec.Application.Shared.Results;
-using InsanmarTec.Domain.Roles;
+using InsanmarTec.Domain.Auth.Roles;
 using InsanmarTec.Domain.Shared;
 using InsanmarTec.Domain.Shared.Dependency;
 
@@ -17,7 +17,7 @@ namespace InsanmarTec.Application.Roles.Features
             _objectMapper = objectMapper;
         }
 
-        public async Task<Result<IEnumerable<RoleDto>>> ExecuteAsync()
+        public async Task<Result<IEnumerable<RoleDto>>> Execute()
         {
             try
             {

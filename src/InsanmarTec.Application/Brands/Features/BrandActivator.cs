@@ -1,24 +1,23 @@
 ﻿using InsanmarTec.Application.Shared.Dtos;
 using InsanmarTec.Application.Shared.Results;
-using InsanmarTec.Domain.Roles;
-using InsanmarTec.Domain.Shared;
+using InsanmarTec.Domain.Brands;
 using InsanmarTec.Domain.Shared.Dependency;
 using InsanmarTec.Domain.Shared.Entities;
 
-namespace InsanmarTec.Application.Roles.Features
+namespace InsanmarTec.Application.Brands.Features
 {
-    public class RoleDeleter : ITransientDependency
+    public class BrandActivator : ITransientDependency
     {
-        private readonly IRoleRepository _roleRepository;
+        private readonly IBrandRepository _brandRepository;
 
-        public RoleDeleter(IRoleRepository roleRepository) => _roleRepository = roleRepository;
+        public BrandActivator(IBrandRepository brandRepository) =>
+            _brandRepository = brandRepository;
 
-        public async Task<Result> ExecuteAsync(EntityDto input)
+        public async Task<Result> Execute(EntityDto input)
         {
             try
             {
-                var roleDb = await _roleRepository.GetAsync(input.Id);
-                await _roleRepository.DeleteAsync(roleDb.Id);
+                await _brandRepository.Activate(input.Id);
                 return Result.Success();
             }
             catch (EntityNotFoundException ex)

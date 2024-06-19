@@ -19,7 +19,7 @@ namespace InsanmarTec.Application.Brands.Features
             _objectMapper = objectMapper;
         }
 
-        public async Task<Result<BrandDto>> ExecuteAsync(EntityDto input)
+        public async Task<Result<BrandDto>> Execute(EntityDto input)
         {
             try
             {

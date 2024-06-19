@@ -1,13 +1,10 @@
-using InsanmarTec.Domain.Shared.Dependency;
+using InsanmarTec.Domain.Shared.Repositories;
 
 namespace InsanmarTec.Domain.Brands
 {
-    public interface IBrandRepository : ITransientDependency
+    public interface IBrandRepository : IAsyncCrudRepository<Brand>
     {
-        Task<Brand> CreateAsync(Brand brand);
-        Task DisableAsync(int id);
-        Task<Brand> GetAsync(int id);
-        Task<IEnumerable<Brand>> GetAllAsync();
-        Task<Brand> UpdateAsync(Brand brand);
+        Task Deactivate(int id);
+        Task Activate(int id);
     }
 }

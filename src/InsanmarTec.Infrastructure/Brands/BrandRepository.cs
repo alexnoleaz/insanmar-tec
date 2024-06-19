@@ -1,31 +1,23 @@
 using InsanmarTec.Domain.Brands;
 using InsanmarTec.Domain.Shared.Datasources;
+using InsanmarTec.Infrastructure.Shared.Repositories;
 
 namespace InsanmarTec.Infrastructure.Brands
 {
-    public class BrandRepository : IBrandRepository
+    public class BrandRepository : AsyncCrudRepository<Brand>, IBrandRepository
     {
-        private readonly IDatasource<Brand> _brandDatasource;
+        public BrandRepository(IDatasource<Brand> brandDatasource)
+            : base(brandDatasource) { }
 
-        public BrandRepository(IDatasource<Brand> brandDatasource) =>
-            _brandDatasource = brandDatasource;
+        public async Task Activate(int id) => await ActivateOrDeactivate(id, true);
 
-        public async Task<Brand> CreateAsync(Brand brand) =>
-            await _brandDatasource.InsertAsync(brand);
+        public async Task Deactivate(int id) => await ActivateOrDeactivate(id, false);
 
-        public async Task DisableAsync(int id)
+        private async Task ActivateOrDeactivate(int id, bool isActive)
         {
-            var brandDb = await _brandDatasource.GetAsync(id);
-            brandDb.IsActive = false;
-            await _brandDatasource.UpdateAsync(brandDb);
+            var brandDb = await GetAsync(id);
+            brandDb.IsActive = isActive;
+            await UpdateAsync(brandDb);
         }
-
-        public async Task<Brand> GetAsync(int id) => await _brandDatasource.GetAsync(id);
-
-        public async Task<IEnumerable<Brand>> GetAllAsync() =>
-            await _brandDatasource.GetAllListAsync();
-
-        public async Task<Brand> UpdateAsync(Brand brand) =>
-            await _brandDatasource.UpdateAsync(brand);
     }
 }

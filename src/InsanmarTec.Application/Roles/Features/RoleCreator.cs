@@ -1,6 +1,6 @@
 ﻿using InsanmarTec.Application.Roles.Dtos;
 using InsanmarTec.Application.Shared.Results;
-using InsanmarTec.Domain.Roles;
+using InsanmarTec.Domain.Auth.Roles;
 using InsanmarTec.Domain.Shared;
 using InsanmarTec.Domain.Shared.Dependency;
 
@@ -17,9 +17,29 @@ namespace InsanmarTec.Application.Roles.Features
             _objectMapper = objectMapper;
         }
 
-        public async Task<Result> ExecuteAsync(CreateRoleDto input)
+        public async Task<Result> Execute(CreateRoleDto input)
         {
-            var result = RoleValidator.Validate(input);
+            var result = new ValidationResult();
+
+            if (string.IsNullOrEmpty(input.Name) || string.IsNullOrWhiteSpace(input.Name))
+                result.Errors.Add("Se requiere el nombre.");
+
+            if (input.Name?.Length > RoleConsts.MaxNameLength)
+                result.Errors.Add(
+                    $"El nombre no puede tener más de {RoleConsts.MaxNameLength} caracteres."
+                );
+
+            if (
+                string.IsNullOrEmpty(input.Description)
+                || string.IsNullOrWhiteSpace(input.Description)
+            )
+                result.Errors.Add("Se requiere la descripción.");
+
+            if (input.Description?.Length > RoleConsts.MaxDescriptionLength)
+                result.Errors.Add(
+                    $"La descripción no puede tener más de {RoleConsts.MaxDescriptionLength} caracteres."
+                );
+
             if (!result.IsValid)
                 return Result.Failure(string.Join(",", result.Errors));
 

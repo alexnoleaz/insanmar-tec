@@ -1,23 +1,21 @@
 ﻿using InsanmarTec.Application.Shared.Dtos;
 using InsanmarTec.Application.Shared.Results;
-using InsanmarTec.Domain.Brands;
-using InsanmarTec.Domain.Shared.Dependency;
+using InsanmarTec.Domain.Auth.Users;
 using InsanmarTec.Domain.Shared.Entities;
 
-namespace InsanmarTec.Application.Brands.Features
+namespace InsanmarTec.Application.Users.Features
 {
-    public class BrandDisabler : ITransientDependency
+    public class UserActivator
     {
-        private readonly IBrandRepository _brandRepository;
+        private readonly IUserRepository _userRepository;
 
-        public BrandDisabler(IBrandRepository brandRepository) =>
-            _brandRepository = brandRepository;
+        public UserActivator(IUserRepository userRepository) => _userRepository = userRepository;
 
-        public async Task<Result> ExecuteAsync(EntityDto input)
+        public async Task<Result> Execute(EntityDto input)
         {
             try
             {
-                await _brandRepository.DisableAsync(input.Id);
+                await _userRepository.Activate(input.Id);
                 return Result.Success();
             }
             catch (EntityNotFoundException ex)

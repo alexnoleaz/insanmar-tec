@@ -1,4 +1,4 @@
-﻿namespace InsanmarTec.Domain.Roles
+﻿namespace InsanmarTec.Domain.Auth.Roles
 {
     public class RoleConsts
     {
