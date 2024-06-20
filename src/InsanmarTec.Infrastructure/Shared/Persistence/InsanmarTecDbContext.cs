@@ -15,6 +15,7 @@ namespace InsanmarTec.Infrastructure.Shared.Persistence
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(InfrastructureModule).Assembly);
             modelBuilder.ApplyFilterByIsDeleted();
+            InitialSeed.Seed(modelBuilder);
         }
 
         protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
