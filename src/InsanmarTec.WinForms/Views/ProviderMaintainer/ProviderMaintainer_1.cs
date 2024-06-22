@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace InsanmarTec.WinForms.Views
 {
-    public partial class ProviderMaintainer : Form, ITransientDependency
+    public partial class ProviderMaintainer_1 : Form, ITransientDependency
     {
-        public ProviderMaintainer()
+        public ProviderMaintainer_1()
         {
             InitializeComponent();
         }
