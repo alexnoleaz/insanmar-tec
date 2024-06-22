@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             groupBox1 = new GroupBox();
+            dateTimePicker1 = new DateTimePicker();
+            domainUpDown1 = new DomainUpDown();
+            comboBox1 = new ComboBox();
             comboBox4 = new ComboBox();
             comboBox3 = new ComboBox();
             comboBox2 = new ComboBox();
@@ -46,14 +49,13 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            comboBox1 = new ComboBox();
-            domainUpDown1 = new DomainUpDown();
-            dateTimePicker1 = new DateTimePicker();
+            button1 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(dateTimePicker1);
             groupBox1.Controls.Add(domainUpDown1);
             groupBox1.Controls.Add(comboBox1);
@@ -82,6 +84,28 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Detalles de Productos";
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(233, 342);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(319, 25);
+            dateTimePicker1.TabIndex = 21;
+            // 
+            // domainUpDown1
+            // 
+            domainUpDown1.Location = new Point(304, 269);
+            domainUpDown1.Name = "domainUpDown1";
+            domainUpDown1.Size = new Size(103, 25);
+            domainUpDown1.TabIndex = 20;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(24, 130);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(234, 25);
+            comboBox1.TabIndex = 19;
             // 
             // comboBox4
             // 
@@ -225,27 +249,15 @@
             label1.TabIndex = 0;
             label1.Text = "Codigo del Producto:";
             // 
-            // comboBox1
+            // button1
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(24, 130);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(234, 25);
-            comboBox1.TabIndex = 19;
-            // 
-            // domainUpDown1
-            // 
-            domainUpDown1.Location = new Point(304, 269);
-            domainUpDown1.Name = "domainUpDown1";
-            domainUpDown1.Size = new Size(103, 25);
-            domainUpDown1.TabIndex = 20;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(233, 342);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(319, 25);
-            dateTimePicker1.TabIndex = 21;
+            button1.BackColor = SystemColors.InactiveCaption;
+            button1.Location = new Point(446, 248);
+            button1.Name = "button1";
+            button1.Size = new Size(126, 65);
+            button1.TabIndex = 22;
+            button1.Text = "Grabar";
+            button1.UseVisualStyleBackColor = false;
             // 
             // ProductMaintainer_1
             // 
@@ -285,5 +297,6 @@
         private DomainUpDown domainUpDown1;
         private ComboBox comboBox1;
         private DateTimePicker dateTimePicker1;
+        private Button button1;
     }
 }
