@@ -1,4 +1,5 @@
-﻿using System;
+﻿using InsanmarTec.Domain.Shared.Dependency;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace InsanmarTec.WinForms.Views.ProviderMaintainer
 {
-    public partial class ProviderMaintainer_2 : Form
+    public partial class ProviderMaintainer_2 : Form, ITransientDependency
     {
         public ProviderMaintainer_2()
         {

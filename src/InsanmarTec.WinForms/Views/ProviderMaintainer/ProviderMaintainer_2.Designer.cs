@@ -35,7 +35,7 @@
             // 
             // richTextBox1
             // 
-            richTextBox1.Location = new Point(12, 106);
+            richTextBox1.Location = new Point(25, 97);
             richTextBox1.Name = "richTextBox1";
             richTextBox1.Size = new Size(583, 276);
             richTextBox1.TabIndex = 3;
@@ -44,7 +44,7 @@
             // txbBus
             // 
             txbBus.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txbBus.Location = new Point(126, 46);
+            txbBus.Location = new Point(127, 47);
             txbBus.Name = "txbBus";
             txbBus.Size = new Size(311, 25);
             txbBus.TabIndex = 4;
