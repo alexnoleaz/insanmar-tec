@@ -24,7 +24,7 @@ namespace InsanmarTec.WinForms
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             System.Windows.Forms.Application.Run(
-                CreateHostBuilder().Build().Services.GetRequiredService<ProviderMaintainer_1>()
+                CreateHostBuilder().Build().Services.GetRequiredService<CustomerMaintainer_1>()
             );
         }
 
