@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             CodPro = new Label();
-            textBox1 = new TextBox();
+            corelec = new TextBox();
             groupBox1 = new GroupBox();
             btnGrab = new Button();
-            comboBox1 = new ComboBox();
-            dateTimePicker1 = new DateTimePicker();
-            textBox8 = new TextBox();
+            rubro1 = new ComboBox();
+            datTimPickProv = new DateTimePicker();
+            razsoci = new TextBox();
             label4 = new Label();
             label3 = new Label();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
+            nomcomp = new TextBox();
+            codprov = new TextBox();
+            telef = new TextBox();
             label2 = new Label();
-            textBox3 = new TextBox();
+            ruc1 = new TextBox();
             label1 = new Label();
             Rub = new Label();
             RazSoc = new Label();
-            textBox2 = new TextBox();
+            direc = new TextBox();
             RUCProv = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -61,37 +61,38 @@
             CodPro.TabIndex = 0;
             CodPro.Text = "Codigo Proveedor:";
             // 
-            // textBox1
+            // corelec
             // 
-            textBox1.Location = new Point(291, 277);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(271, 25);
-            textBox1.TabIndex = 1;
+            corelec.Location = new Point(291, 277);
+            corelec.Name = "corelec";
+            corelec.Size = new Size(271, 25);
+            corelec.TabIndex = 1;
+            corelec.TextChanged += corelec_TextChanged;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(btnGrab);
-            groupBox1.Controls.Add(comboBox1);
-            groupBox1.Controls.Add(dateTimePicker1);
-            groupBox1.Controls.Add(textBox8);
+            groupBox1.Controls.Add(rubro1);
+            groupBox1.Controls.Add(datTimPickProv);
+            groupBox1.Controls.Add(razsoci);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(textBox6);
-            groupBox1.Controls.Add(textBox5);
-            groupBox1.Controls.Add(textBox4);
+            groupBox1.Controls.Add(nomcomp);
+            groupBox1.Controls.Add(codprov);
+            groupBox1.Controls.Add(telef);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(textBox3);
+            groupBox1.Controls.Add(ruc1);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(Rub);
             groupBox1.Controls.Add(RazSoc);
-            groupBox1.Controls.Add(textBox2);
+            groupBox1.Controls.Add(direc);
             groupBox1.Controls.Add(RUCProv);
             groupBox1.Controls.Add(CodPro);
-            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(corelec);
             groupBox1.Font = new Font("Lucida Fax", 11.25F);
             groupBox1.Location = new Point(12, 6);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(612, 431);
+            groupBox1.Size = new Size(596, 392);
             groupBox1.TabIndex = 3;
             groupBox1.TabStop = false;
             groupBox1.Text = "Datos del Proveedor";
@@ -106,28 +107,32 @@
             btnGrab.TabIndex = 18;
             btnGrab.Text = "Grabar";
             btnGrab.UseVisualStyleBackColor = false;
+            btnGrab.Click += btnGrab_Click;
             // 
-            // comboBox1
+            // rubro1
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(291, 211);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(176, 25);
-            comboBox1.TabIndex = 17;
+            rubro1.FormattingEnabled = true;
+            rubro1.Location = new Point(291, 211);
+            rubro1.Name = "rubro1";
+            rubro1.Size = new Size(176, 25);
+            rubro1.TabIndex = 17;
+            rubro1.SelectedIndexChanged += rubro1_SelectedIndexChanged;
             // 
-            // dateTimePicker1
+            // datTimPickProv
             // 
-            dateTimePicker1.Location = new Point(351, 0);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(234, 25);
-            dateTimePicker1.TabIndex = 16;
+            datTimPickProv.Location = new Point(263, 0);
+            datTimPickProv.Name = "datTimPickProv";
+            datTimPickProv.Size = new Size(322, 25);
+            datTimPickProv.TabIndex = 16;
+            datTimPickProv.ValueChanged += datTimPickProv_ValueChanged;
             // 
-            // textBox8
+            // razsoci
             // 
-            textBox8.Location = new Point(30, 277);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(209, 25);
-            textBox8.TabIndex = 15;
+            razsoci.Location = new Point(30, 277);
+            razsoci.Name = "razsoci";
+            razsoci.Size = new Size(209, 25);
+            razsoci.TabIndex = 15;
+            razsoci.TextChanged += razsoci_TextChanged;
             // 
             // label4
             // 
@@ -151,26 +156,29 @@
             label3.TabIndex = 12;
             label3.Text = "Teléfono:";
             // 
-            // textBox6
+            // nomcomp
             // 
-            textBox6.Location = new Point(291, 79);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(271, 25);
-            textBox6.TabIndex = 11;
+            nomcomp.Location = new Point(291, 79);
+            nomcomp.Name = "nomcomp";
+            nomcomp.Size = new Size(271, 25);
+            nomcomp.TabIndex = 11;
+            nomcomp.TextChanged += nomcomp_TextChanged;
             // 
-            // textBox5
+            // codprov
             // 
-            textBox5.Location = new Point(30, 79);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(170, 25);
-            textBox5.TabIndex = 10;
+            codprov.Location = new Point(30, 79);
+            codprov.Name = "codprov";
+            codprov.Size = new Size(170, 25);
+            codprov.TabIndex = 10;
+            codprov.TextChanged += codprov_TextChanged;
             // 
-            // textBox4
+            // telef
             // 
-            textBox4.Location = new Point(30, 145);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(176, 25);
-            textBox4.TabIndex = 9;
+            telef.Location = new Point(30, 145);
+            telef.Name = "telef";
+            telef.Size = new Size(176, 25);
+            telef.TabIndex = 9;
+            telef.TextChanged += telef_TextChanged;
             // 
             // label2
             // 
@@ -183,12 +191,13 @@
             label2.TabIndex = 8;
             label2.Text = "Dirección:";
             // 
-            // textBox3
+            // ruc1
             // 
-            textBox3.Location = new Point(30, 211);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(224, 25);
-            textBox3.TabIndex = 7;
+            ruc1.Location = new Point(30, 211);
+            ruc1.Name = "ruc1";
+            ruc1.Size = new Size(224, 25);
+            ruc1.TabIndex = 7;
+            ruc1.TextChanged += ruc1_TextChanged;
             // 
             // label1
             // 
@@ -223,12 +232,13 @@
             RazSoc.TabIndex = 4;
             RazSoc.Text = "Razon Social:";
             // 
-            // textBox2
+            // direc
             // 
-            textBox2.Location = new Point(291, 145);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(271, 25);
-            textBox2.TabIndex = 3;
+            direc.Location = new Point(291, 145);
+            direc.Name = "direc";
+            direc.Size = new Size(271, 25);
+            direc.TabIndex = 3;
+            direc.TextChanged += direc_TextChanged;
             // 
             // RUCProv
             // 
@@ -246,7 +256,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(636, 449);
+            ClientSize = new Size(620, 410);
             Controls.Add(groupBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ProviderMaintainer_1";
@@ -260,23 +270,23 @@
         #endregion
 
         private Label CodPro;
-        private TextBox textBox1;
+        private TextBox corelec;
         private GroupBox groupBox1;
         private Label RUCProv;
         private Label RazSoc;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox direc;
+        private TextBox ruc1;
         private Label label1;
         private Label Rub;
         private Label label2;
-        private TextBox textBox4;
-        private TextBox textBox6;
-        private TextBox textBox5;
+        private TextBox telef;
+        private TextBox nomcomp;
+        private TextBox codprov;
         private Label label4;
         private Label label3;
-        private TextBox textBox8;
-        private ComboBox comboBox1;
-        private DateTimePicker dateTimePicker1;
+        private TextBox razsoci;
+        private ComboBox rubro1;
+        private DateTimePicker datTimPickProv;
         private Button btnGrab;
     }
 }

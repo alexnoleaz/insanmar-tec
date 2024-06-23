@@ -30,8 +30,8 @@
         {
             txbBus = new TextBox();
             button1 = new Button();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            datGrViProv = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)datGrViProv).BeginInit();
             SuspendLayout();
             // 
             // txbBus
@@ -54,13 +54,14 @@
             button1.Text = "Buscar";
             button1.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // datGrViProv
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(21, 82);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(568, 304);
-            dataGridView1.TabIndex = 6;
+            datGrViProv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            datGrViProv.Location = new Point(21, 82);
+            datGrViProv.Name = "datGrViProv";
+            datGrViProv.Size = new Size(568, 304);
+            datGrViProv.TabIndex = 6;
+            datGrViProv.CellContentClick += datGrViProv_CellContentClick;
             // 
             // ProviderMaintainer_2
             // 
@@ -68,13 +69,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(620, 410);
-            Controls.Add(dataGridView1);
+            Controls.Add(datGrViProv);
             Controls.Add(button1);
             Controls.Add(txbBus);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ProviderMaintainer_2";
             Text = "ProviderMaintainer_2";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)datGrViProv).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -82,6 +83,6 @@
         #endregion
         private TextBox txbBus;
         private Button button1;
-        private DataGridView dataGridView1;
+        private DataGridView datGrViProv;
     }
 }
