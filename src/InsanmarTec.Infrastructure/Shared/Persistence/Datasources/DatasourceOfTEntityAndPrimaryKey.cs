@@ -91,13 +91,15 @@ namespace InsanmarTec.Infrastructure.Shared.Persistence.Datasources
 
         public List<TEntity> GetAllList() => GetAll().ToList();
 
-        public async Task<List<TEntity>> GetAllListAsync() => await Table.AsQueryable().ToListAsync();
+        public async Task<List<TEntity>> GetAllListAsync() =>
+            await Table.AsQueryable().ToListAsync();
 
         public List<TEntity> GetAllList(Expression<Func<TEntity, bool>> predicate) =>
             GetAll().Where(predicate).ToList();
 
-        public async Task<List<TEntity>> GetAllListAsync(Expression<Func<TEntity, bool>> predicate) =>
-            await Table.AsQueryable().Where(predicate).ToListAsync();
+        public async Task<List<TEntity>> GetAllListAsync(
+            Expression<Func<TEntity, bool>> predicate
+        ) => await Table.AsQueryable().Where(predicate).ToListAsync();
 
         public T Query<T>(Func<IQueryable<TEntity>, T> queryMethod) => queryMethod(GetAll());
 
@@ -135,22 +137,49 @@ namespace InsanmarTec.Infrastructure.Shared.Persistence.Datasources
         public TEntity Insert(TEntity entity)
         {
             SetCreationAuditProperties(entity);
-            var entitySaved = Table.Add(entity).Entity;
-            _context.SaveChanges();
-            return entitySaved;
+            try
+            {
+                var entitySaved = Table.Add(entity).Entity;
+                _context.SaveChanges();
+                return entitySaved;
+            }
+            catch (DbUpdateException ex)
+            {
+                foreach (
+                    var entry in _context
+                        .ChangeTracker.Entries()
+                        .Where(e => e.State == EntityState.Added)
+                )
+                    entry.State = EntityState.Detached;
+                throw;
+            }
         }
 
         public async Task<TEntity> InsertAsync(TEntity entity)
         {
             SetCreationAuditProperties(entity);
-            var entitySaved = Table.Add(entity).Entity;
-            await _context.SaveChangesAsync();
-            return entitySaved;
+            try
+            {
+                var entitySaved = Table.Add(entity).Entity;
+                await _context.SaveChangesAsync();
+                return entitySaved;
+            }
+            catch (DbUpdateException ex)
+            {
+                foreach (
+                    var entry in _context
+                        .ChangeTracker.Entries()
+                        .Where(e => e.State == EntityState.Added)
+                )
+                    entry.State = EntityState.Detached;
+                throw;
+            }
         }
 
         public TPrimaryKey InsertAndGetId(TEntity entity) => Insert(entity).Id;
 
-        public async Task<TPrimaryKey> InsertAndGetIdAsync(TEntity entity) => (await InsertAsync(entity)).Id;
+        public async Task<TPrimaryKey> InsertAndGetIdAsync(TEntity entity) =>
+            (await InsertAsync(entity)).Id;
 
         public TEntity InsertOrUpdate(TEntity entity) =>
             entity.IsTransient() ? Insert(entity) : Update(entity);
@@ -160,7 +189,8 @@ namespace InsanmarTec.Infrastructure.Shared.Persistence.Datasources
 
         public TPrimaryKey InsertOrUpdateAndGetId(TEntity entity) => InsertOrUpdate(entity).Id;
 
-        public async Task<TPrimaryKey> InsertOrUpdateAndGetIdAsync(TEntity entity) => (await InsertOrUpdateAsync(entity)).Id;
+        public async Task<TPrimaryKey> InsertOrUpdateAndGetIdAsync(TEntity entity) =>
+            (await InsertOrUpdateAsync(entity)).Id;
 
         #endregion
 
