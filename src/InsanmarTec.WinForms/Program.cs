@@ -4,7 +4,6 @@ using InsanmarTec.Domain.Shared.Datasources;
 using InsanmarTec.Infrastructure.Shared.Persistence;
 using InsanmarTec.Infrastructure.Shared.Persistence.Datasources;
 using InsanmarTec.WinForms.Views;
-using InsanmarTec.WinForms.Views.ProviderMaintainer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

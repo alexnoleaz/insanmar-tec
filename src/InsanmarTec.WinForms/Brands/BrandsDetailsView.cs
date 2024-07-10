@@ -1,7 +1,6 @@
 ﻿using InsanmarTec.Application.Brands.Dtos;
 using InsanmarTec.Application.Brands.Features;
 using InsanmarTec.Application.Shared.Results;
-using InsanmarTec.Domain.Brands;
 using InsanmarTec.Domain.Shared.Dependency;
 using InsanmarTec.WinForms.Shared;
 

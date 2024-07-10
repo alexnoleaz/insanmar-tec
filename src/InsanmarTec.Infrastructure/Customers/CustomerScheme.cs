@@ -15,7 +15,7 @@ namespace InsanmarTec.Infrastructure.Customers
             builder.Property(c => c.Email).HasMaxLength(CustomerConsts.MaxEmailLength);
             builder.Property(c => c.Dni).HasMaxLength(CustomerConsts.MaxDniLength);
 
-            builder.HasIndex(c => c.Email).IsUnique();
+            builder.HasIndex(c => c.Dni).IsUnique();
         }
     }
 }

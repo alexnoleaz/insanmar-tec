@@ -5,7 +5,6 @@ using InsanmarTec.Application.Shared.Results;
 using InsanmarTec.Domain.Shared.Dependency;
 using InsanmarTec.WinForms.Shared;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.IdentityModel.Tokens;
 
 namespace InsanmarTec.WinForms.Brands
 {

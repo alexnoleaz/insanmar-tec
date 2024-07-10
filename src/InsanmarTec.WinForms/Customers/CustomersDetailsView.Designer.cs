@@ -29,55 +29,39 @@
         private void InitializeComponent()
         {
             product = new MaterialSkin.Controls.MaterialCard();
-            txtDirection = new MaterialSkin.Controls.MaterialTextBox();
             lblTitle = new MaterialSkin.Controls.MaterialLabel();
             btnCancel = new MaterialSkin.Controls.MaterialButton();
-            txtCod = new MaterialSkin.Controls.MaterialTextBox();
             btnSave = new MaterialSkin.Controls.MaterialButton();
-            txtName = new MaterialSkin.Controls.MaterialTextBox();
+            txtFirstName = new MaterialSkin.Controls.MaterialTextBox();
+            txtLastName = new MaterialSkin.Controls.MaterialTextBox();
+            txtAddress = new MaterialSkin.Controls.MaterialTextBox();
             txtPhone = new MaterialSkin.Controls.MaterialTextBox();
-            txtPhoneadd = new MaterialSkin.Controls.MaterialTextBox();
+            txtEmail = new MaterialSkin.Controls.MaterialTextBox();
+            txtDni = new MaterialSkin.Controls.MaterialTextBox();
             product.SuspendLayout();
             SuspendLayout();
             // 
             // product
             // 
             product.BackColor = Color.FromArgb(255, 255, 255);
-            product.Controls.Add(txtPhoneadd);
+            product.Controls.Add(txtDni);
+            product.Controls.Add(txtEmail);
             product.Controls.Add(txtPhone);
-            product.Controls.Add(txtDirection);
+            product.Controls.Add(txtAddress);
+            product.Controls.Add(txtLastName);
+            product.Controls.Add(txtFirstName);
             product.Controls.Add(lblTitle);
             product.Controls.Add(btnCancel);
-            product.Controls.Add(txtCod);
             product.Controls.Add(btnSave);
-            product.Controls.Add(txtName);
             product.Depth = 0;
             product.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            product.Location = new Point(10, 9);
+            product.Location = new Point(9, 5);
             product.Margin = new Padding(14);
             product.MouseState = MaterialSkin.MouseState.HOVER;
             product.Name = "product";
             product.Padding = new Padding(14);
-            product.Size = new Size(434, 388);
+            product.Size = new Size(339, 420);
             product.TabIndex = 8;
-            // 
-            // txtDirection
-            // 
-            txtDirection.AnimateReadOnly = false;
-            txtDirection.BorderStyle = BorderStyle.None;
-            txtDirection.Depth = 0;
-            txtDirection.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtDirection.Hint = "Dirección";
-            txtDirection.LeadingIcon = null;
-            txtDirection.Location = new Point(84, 144);
-            txtDirection.MaxLength = 50;
-            txtDirection.MouseState = MaterialSkin.MouseState.OUT;
-            txtDirection.Multiline = false;
-            txtDirection.Name = "txtDirection";
-            txtDirection.Size = new Size(264, 50);
-            txtDirection.TabIndex = 10;
-            txtDirection.Text = "";
-            txtDirection.TrailingIcon = null;
             // 
             // lblTitle
             // 
@@ -98,7 +82,7 @@
             btnCancel.Depth = 0;
             btnCancel.HighEmphasis = true;
             btnCancel.Icon = null;
-            btnCancel.Location = new Point(216, 317);
+            btnCancel.Location = new Point(175, 375);
             btnCancel.Margin = new Padding(4, 6, 4, 6);
             btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
             btnCancel.Name = "btnCancel";
@@ -110,24 +94,6 @@
             btnCancel.UseAccentColor = false;
             btnCancel.UseVisualStyleBackColor = true;
             // 
-            // txtCod
-            // 
-            txtCod.AnimateReadOnly = false;
-            txtCod.BorderStyle = BorderStyle.None;
-            txtCod.Depth = 0;
-            txtCod.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtCod.Hint = "Codigo de Cliente";
-            txtCod.LeadingIcon = null;
-            txtCod.Location = new Point(37, 33);
-            txtCod.MaxLength = 50;
-            txtCod.MouseState = MaterialSkin.MouseState.OUT;
-            txtCod.Multiline = false;
-            txtCod.Name = "txtCod";
-            txtCod.Size = new Size(173, 50);
-            txtCod.TabIndex = 0;
-            txtCod.Text = "";
-            txtCod.TrailingIcon = null;
-            // 
             // btnSave
             // 
             btnSave.AutoSizeMode = AutoSizeMode.GrowAndShrink;
@@ -135,7 +101,7 @@
             btnSave.Depth = 0;
             btnSave.HighEmphasis = true;
             btnSave.Icon = null;
-            btnSave.Location = new Point(120, 317);
+            btnSave.Location = new Point(79, 375);
             btnSave.Margin = new Padding(4, 6, 4, 6);
             btnSave.MouseState = MaterialSkin.MouseState.HOVER;
             btnSave.Name = "btnSave";
@@ -147,23 +113,59 @@
             btnSave.UseAccentColor = false;
             btnSave.UseVisualStyleBackColor = true;
             // 
-            // txtName
+            // txtFirstName
             // 
-            txtName.AnimateReadOnly = false;
-            txtName.BorderStyle = BorderStyle.None;
-            txtName.Depth = 0;
-            txtName.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtName.Hint = "Nombre";
-            txtName.LeadingIcon = null;
-            txtName.Location = new Point(216, 33);
-            txtName.MaxLength = 50;
-            txtName.MouseState = MaterialSkin.MouseState.OUT;
-            txtName.Multiline = false;
-            txtName.Name = "txtName";
-            txtName.Size = new Size(188, 50);
-            txtName.TabIndex = 1;
-            txtName.Text = "";
-            txtName.TrailingIcon = null;
+            txtFirstName.AnimateReadOnly = false;
+            txtFirstName.BorderStyle = BorderStyle.None;
+            txtFirstName.Depth = 0;
+            txtFirstName.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtFirstName.Hint = "Nombres";
+            txtFirstName.LeadingIcon = null;
+            txtFirstName.Location = new Point(37, 31);
+            txtFirstName.MaxLength = 50;
+            txtFirstName.MouseState = MaterialSkin.MouseState.OUT;
+            txtFirstName.Multiline = false;
+            txtFirstName.Name = "txtFirstName";
+            txtFirstName.Size = new Size(264, 50);
+            txtFirstName.TabIndex = 6;
+            txtFirstName.Text = "";
+            txtFirstName.TrailingIcon = null;
+            // 
+            // txtLastName
+            // 
+            txtLastName.AnimateReadOnly = false;
+            txtLastName.BorderStyle = BorderStyle.None;
+            txtLastName.Depth = 0;
+            txtLastName.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtLastName.Hint = "Apellidos";
+            txtLastName.LeadingIcon = null;
+            txtLastName.Location = new Point(37, 87);
+            txtLastName.MaxLength = 50;
+            txtLastName.MouseState = MaterialSkin.MouseState.OUT;
+            txtLastName.Multiline = false;
+            txtLastName.Name = "txtLastName";
+            txtLastName.Size = new Size(264, 50);
+            txtLastName.TabIndex = 7;
+            txtLastName.Text = "";
+            txtLastName.TrailingIcon = null;
+            // 
+            // txtAddress
+            // 
+            txtAddress.AnimateReadOnly = false;
+            txtAddress.BorderStyle = BorderStyle.None;
+            txtAddress.Depth = 0;
+            txtAddress.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtAddress.Hint = "Dirección";
+            txtAddress.LeadingIcon = null;
+            txtAddress.Location = new Point(37, 143);
+            txtAddress.MaxLength = 150;
+            txtAddress.MouseState = MaterialSkin.MouseState.OUT;
+            txtAddress.Multiline = false;
+            txtAddress.Name = "txtAddress";
+            txtAddress.Size = new Size(264, 50);
+            txtAddress.TabIndex = 8;
+            txtAddress.Text = "";
+            txtAddress.TrailingIcon = null;
             // 
             // txtPhone
             // 
@@ -171,45 +173,64 @@
             txtPhone.BorderStyle = BorderStyle.None;
             txtPhone.Depth = 0;
             txtPhone.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtPhone.Hint = "Teléfono";
+            txtPhone.Hint = "Telefono";
             txtPhone.LeadingIcon = null;
-            txtPhone.Location = new Point(37, 89);
-            txtPhone.MaxLength = 50;
+            txtPhone.Location = new Point(37, 199);
+            txtPhone.MaxLength = 9;
             txtPhone.MouseState = MaterialSkin.MouseState.OUT;
             txtPhone.Multiline = false;
             txtPhone.Name = "txtPhone";
-            txtPhone.Size = new Size(173, 50);
-            txtPhone.TabIndex = 15;
+            txtPhone.Size = new Size(264, 50);
+            txtPhone.TabIndex = 9;
             txtPhone.Text = "";
             txtPhone.TrailingIcon = null;
             // 
-            // txtPhoneadd
+            // txtEmail
             // 
-            txtPhoneadd.AnimateReadOnly = false;
-            txtPhoneadd.BorderStyle = BorderStyle.None;
-            txtPhoneadd.Depth = 0;
-            txtPhoneadd.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtPhoneadd.Hint = "Teléfono adicional";
-            txtPhoneadd.LeadingIcon = null;
-            txtPhoneadd.Location = new Point(216, 88);
-            txtPhoneadd.MaxLength = 50;
-            txtPhoneadd.MouseState = MaterialSkin.MouseState.OUT;
-            txtPhoneadd.Multiline = false;
-            txtPhoneadd.Name = "txtPhoneadd";
-            txtPhoneadd.Size = new Size(188, 50);
-            txtPhoneadd.TabIndex = 16;
-            txtPhoneadd.Text = "";
-            txtPhoneadd.TrailingIcon = null;
+            txtEmail.AnimateReadOnly = false;
+            txtEmail.BorderStyle = BorderStyle.None;
+            txtEmail.Depth = 0;
+            txtEmail.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtEmail.Hint = "Correo electrónico";
+            txtEmail.LeadingIcon = null;
+            txtEmail.Location = new Point(37, 255);
+            txtEmail.MaxLength = 50;
+            txtEmail.MouseState = MaterialSkin.MouseState.OUT;
+            txtEmail.Multiline = false;
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(264, 50);
+            txtEmail.TabIndex = 10;
+            txtEmail.Text = "";
+            txtEmail.TrailingIcon = null;
             // 
-            // CustomerMaintainer_1
+            // txtDni
+            // 
+            txtDni.AnimateReadOnly = false;
+            txtDni.BorderStyle = BorderStyle.None;
+            txtDni.Depth = 0;
+            txtDni.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtDni.Hint = "DNI";
+            txtDni.LeadingIcon = null;
+            txtDni.Location = new Point(37, 311);
+            txtDni.MaxLength = 8;
+            txtDni.MouseState = MaterialSkin.MouseState.OUT;
+            txtDni.Multiline = false;
+            txtDni.Name = "txtDni";
+            txtDni.Size = new Size(264, 50);
+            txtDni.TabIndex = 11;
+            txtDni.Text = "";
+            txtDni.TrailingIcon = null;
+            // 
+            // CustomersDetailsView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(455, 410);
+            ClientSize = new Size(356, 431);
             Controls.Add(product);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "CustomerMaintainer_1";
+            Name = "CustomersDetailsView";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             product.ResumeLayout(false);
             product.PerformLayout();
@@ -219,16 +240,16 @@
         #endregion
 
         private MaterialSkin.Controls.MaterialCard product;
-        private MaterialSkin.Controls.MaterialTextBox txtPhone;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
+        private MaterialSkin.Controls.MaterialTextBox txtLastName;
         private MaterialSkin.Controls.MaterialComboBox cmbQuality;
         private MaterialSkin.Controls.MaterialComboBox cmbModel;
-        private MaterialSkin.Controls.MaterialTextBox txtDirection;
         private MaterialSkin.Controls.MaterialLabel lblTitle;
         private MaterialSkin.Controls.MaterialButton btnCancel;
-        private MaterialSkin.Controls.MaterialTextBox txtCod;
         private MaterialSkin.Controls.MaterialButton btnSave;
-        private MaterialSkin.Controls.MaterialTextBox txtName;
-        private MaterialSkin.Controls.MaterialTextBox txtPhoneadd;
+        private MaterialSkin.Controls.MaterialTextBox txtFirstName;
+        private MaterialSkin.Controls.MaterialTextBox txtAddress;
+        private MaterialSkin.Controls.MaterialTextBox txtEmail;
+        private MaterialSkin.Controls.MaterialTextBox txtPhone;
+        private MaterialSkin.Controls.MaterialTextBox txtDni;
     }
 }

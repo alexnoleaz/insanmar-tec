@@ -3,7 +3,6 @@ using InsanmarTec.Domain.Brands;
 using InsanmarTec.Domain.Shared.Datasources;
 using InsanmarTec.Domain.Shared.Entities;
 using InsanmarTec.Infrastructure.Shared.Repositories;
-using Microsoft.EntityFrameworkCore;
 
 namespace InsanmarTec.Infrastructure.Brands
 {

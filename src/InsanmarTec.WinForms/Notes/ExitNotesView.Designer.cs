@@ -1,6 +1,6 @@
-﻿namespace InsanmarTec.WinForms.Views.ProductMaintainer
+﻿namespace InsanmarTec.WinForms.Notes
 {
-    partial class ProductsView
+    partial class ExitNotesView
     {
         /// <summary>
         /// Required designer variable.
@@ -33,8 +33,8 @@
             btnAdd = new FontAwesome.Sharp.IconButton();
             btnSearch = new FontAwesome.Sharp.IconButton();
             txtSearch = new MaterialSkin.Controls.MaterialTextBox();
-            dgvProducts = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
+            dgvExitNotes = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvExitNotes).BeginInit();
             SuspendLayout();
             // 
             // btnAdd
@@ -56,7 +56,7 @@
             btnAdd.Location = new Point(442, 8);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(109, 36);
-            btnAdd.TabIndex = 17;
+            btnAdd.TabIndex = 21;
             btnAdd.Text = "Agregar";
             btnAdd.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAdd.UseVisualStyleBackColor = false;
@@ -77,7 +77,7 @@
             btnSearch.Location = new Point(395, 8);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(41, 36);
-            btnSearch.TabIndex = 16;
+            btnSearch.TabIndex = 20;
             btnSearch.UseVisualStyleBackColor = false;
             // 
             // txtSearch
@@ -86,8 +86,8 @@
             txtSearch.AnimateReadOnly = false;
             txtSearch.BorderStyle = BorderStyle.None;
             txtSearch.Depth = 0;
-            txtSearch.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtSearch.Hint = "Buscar producto...";
+            txtSearch.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtSearch.Hint = "Buscar nota de salida por código...";
             txtSearch.LeadingIcon = null;
             txtSearch.Location = new Point(6, 8);
             txtSearch.MaxLength = 50;
@@ -95,22 +95,22 @@
             txtSearch.Multiline = false;
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(391, 36);
-            txtSearch.TabIndex = 15;
+            txtSearch.TabIndex = 19;
             txtSearch.Text = "";
             txtSearch.TrailingIcon = null;
             txtSearch.UseTallSize = false;
             // 
-            // dgvProducts
+            // dgvExitNotes
             // 
-            dgvProducts.AllowUserToAddRows = false;
-            dgvProducts.AllowUserToDeleteRows = false;
-            dgvProducts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvProducts.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvProducts.BackgroundColor = Color.White;
-            dgvProducts.BorderStyle = BorderStyle.None;
-            dgvProducts.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvProducts.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvExitNotes.AllowUserToAddRows = false;
+            dgvExitNotes.AllowUserToDeleteRows = false;
+            dgvExitNotes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvExitNotes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvExitNotes.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvExitNotes.BackgroundColor = Color.White;
+            dgvExitNotes.BorderStyle = BorderStyle.None;
+            dgvExitNotes.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvExitNotes.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(20, 45, 85);
             dataGridViewCellStyle1.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -118,38 +118,38 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(8, 86, 207);
             dataGridViewCellStyle1.SelectionForeColor = Color.White;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgvProducts.ColumnHeadersHeight = 30;
-            dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dgvProducts.EnableHeadersVisualStyles = false;
-            dgvProducts.GridColor = Color.FromArgb(20, 45, 85);
-            dgvProducts.Location = new Point(6, 52);
-            dgvProducts.Name = "dgvProducts";
-            dgvProducts.ReadOnly = true;
-            dgvProducts.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvProducts.RowHeadersVisible = false;
+            dgvExitNotes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvExitNotes.ColumnHeadersHeight = 30;
+            dgvExitNotes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvExitNotes.EnableHeadersVisualStyles = false;
+            dgvExitNotes.GridColor = Color.FromArgb(20, 45, 85);
+            dgvExitNotes.Location = new Point(6, 52);
+            dgvExitNotes.Name = "dgvExitNotes";
+            dgvExitNotes.ReadOnly = true;
+            dgvExitNotes.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvExitNotes.RowHeadersVisible = false;
             dataGridViewCellStyle2.BackColor = Color.White;
             dataGridViewCellStyle2.ForeColor = Color.FromArgb(20, 45, 85);
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(8, 86, 207);
-            dgvProducts.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            dgvProducts.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgvProducts.Size = new Size(545, 398);
-            dgvProducts.TabIndex = 14;
+            dgvExitNotes.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dgvExitNotes.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dgvExitNotes.Size = new Size(545, 398);
+            dgvExitNotes.TabIndex = 18;
             // 
-            // ProductsView
+            // ExitNotesView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
             ClientSize = new Size(557, 458);
             Controls.Add(btnAdd);
             Controls.Add(btnSearch);
             Controls.Add(txtSearch);
-            Controls.Add(dgvProducts);
+            Controls.Add(dgvExitNotes);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "ProductsView";
-            Text = "ProductMaintainer_2";
-            ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
+            Name = "ExitNotesView";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "ExitNotesView";
+            ((System.ComponentModel.ISupportInitialize)dgvExitNotes).EndInit();
             ResumeLayout(false);
         }
 
@@ -158,6 +158,6 @@
         private FontAwesome.Sharp.IconButton btnAdd;
         private FontAwesome.Sharp.IconButton btnSearch;
         private MaterialSkin.Controls.MaterialTextBox txtSearch;
-        private DataGridView dgvProducts;
+        private DataGridView dgvExitNotes;
     }
 }

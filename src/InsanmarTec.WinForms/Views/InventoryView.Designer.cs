@@ -32,7 +32,6 @@
             tpProducts = new TabPage();
             tpBrands = new TabPage();
             tpModels = new TabPage();
-            tpQualities = new TabPage();
             tcInventory.SuspendLayout();
             SuspendLayout();
             // 
@@ -41,14 +40,13 @@
             tcInventory.Controls.Add(tpProducts);
             tcInventory.Controls.Add(tpBrands);
             tcInventory.Controls.Add(tpModels);
-            tcInventory.Controls.Add(tpQualities);
             tcInventory.Dock = DockStyle.Fill;
             tcInventory.Location = new Point(3, 0);
             tcInventory.Name = "tcInventory";
             tcInventory.SelectedIndex = 0;
             tcInventory.Size = new Size(794, 447);
             tcInventory.TabIndex = 0;
-            tcInventory.SelectedIndexChanged += TCInventorySelectedIndexChagend;
+            tcInventory.SelectedIndexChanged += TCInventoryOnSelectedIndexChagend;
             // 
             // tpProducts
             // 
@@ -79,15 +77,6 @@
             tpModels.Text = "Modelos";
             tpModels.UseVisualStyleBackColor = true;
             // 
-            // tpQualities
-            // 
-            tpQualities.Location = new Point(4, 24);
-            tpQualities.Name = "tpQualities";
-            tpQualities.Size = new Size(786, 419);
-            tpQualities.TabIndex = 3;
-            tpQualities.Text = "Calidades";
-            tpQualities.UseVisualStyleBackColor = true;
-            // 
             // InventoryView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -98,6 +87,7 @@
             Name = "InventoryView";
             Padding = new Padding(3, 0, 3, 3);
             Text = "Inventario";
+            Load += InventoryViewOnLoad;
             tcInventory.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -108,6 +98,5 @@
         private TabPage tpProducts;
         private TabPage tpBrands;
         private TabPage tpModels;
-        private TabPage tpQualities;
     }
 }

@@ -9,14 +9,14 @@ namespace InsanmarTec.WinForms.Views
     {
         private UserDto _user = null!;
         private readonly InventoryView _inventoryView;
-        private readonly SalesView _salesView;
-        private readonly PurchasesView _puchasesView;
+        private readonly SalesMainView _salesView;
+        private readonly PurchasesMainView _puchasesView;
         private readonly SettingsView _settingsView;
 
         public MainView(
             InventoryView inventoryView,
-            SalesView salesView,
-            PurchasesView puchasesView,
+            SalesMainView salesView,
+            PurchasesMainView puchasesView,
             SettingsView settingsView
         )
         {

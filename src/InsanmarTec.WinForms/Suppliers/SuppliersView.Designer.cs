@@ -1,6 +1,6 @@
-﻿namespace InsanmarTec.WinForms.Views.ProductMaintainer
+﻿namespace InsanmarTec.WinForms.Suppliers
 {
-    partial class ProductsView
+    partial class SuppliersView
     {
         /// <summary>
         /// Required designer variable.
@@ -33,8 +33,8 @@
             btnAdd = new FontAwesome.Sharp.IconButton();
             btnSearch = new FontAwesome.Sharp.IconButton();
             txtSearch = new MaterialSkin.Controls.MaterialTextBox();
-            dgvProducts = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
+            dgvSuppliers = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvSuppliers).BeginInit();
             SuspendLayout();
             // 
             // btnAdd
@@ -56,7 +56,7 @@
             btnAdd.Location = new Point(442, 8);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(109, 36);
-            btnAdd.TabIndex = 17;
+            btnAdd.TabIndex = 21;
             btnAdd.Text = "Agregar";
             btnAdd.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAdd.UseVisualStyleBackColor = false;
@@ -77,7 +77,7 @@
             btnSearch.Location = new Point(395, 8);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(41, 36);
-            btnSearch.TabIndex = 16;
+            btnSearch.TabIndex = 20;
             btnSearch.UseVisualStyleBackColor = false;
             // 
             // txtSearch
@@ -86,8 +86,8 @@
             txtSearch.AnimateReadOnly = false;
             txtSearch.BorderStyle = BorderStyle.None;
             txtSearch.Depth = 0;
-            txtSearch.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtSearch.Hint = "Buscar producto...";
+            txtSearch.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtSearch.Hint = "Buscar proveedor...";
             txtSearch.LeadingIcon = null;
             txtSearch.Location = new Point(6, 8);
             txtSearch.MaxLength = 50;
@@ -95,22 +95,22 @@
             txtSearch.Multiline = false;
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(391, 36);
-            txtSearch.TabIndex = 15;
+            txtSearch.TabIndex = 19;
             txtSearch.Text = "";
             txtSearch.TrailingIcon = null;
             txtSearch.UseTallSize = false;
             // 
-            // dgvProducts
+            // dgvSuppliers
             // 
-            dgvProducts.AllowUserToAddRows = false;
-            dgvProducts.AllowUserToDeleteRows = false;
-            dgvProducts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvProducts.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvProducts.BackgroundColor = Color.White;
-            dgvProducts.BorderStyle = BorderStyle.None;
-            dgvProducts.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvProducts.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvSuppliers.AllowUserToAddRows = false;
+            dgvSuppliers.AllowUserToDeleteRows = false;
+            dgvSuppliers.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvSuppliers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvSuppliers.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvSuppliers.BackgroundColor = Color.White;
+            dgvSuppliers.BorderStyle = BorderStyle.None;
+            dgvSuppliers.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvSuppliers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(20, 45, 85);
             dataGridViewCellStyle1.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -118,38 +118,38 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(8, 86, 207);
             dataGridViewCellStyle1.SelectionForeColor = Color.White;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgvProducts.ColumnHeadersHeight = 30;
-            dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dgvProducts.EnableHeadersVisualStyles = false;
-            dgvProducts.GridColor = Color.FromArgb(20, 45, 85);
-            dgvProducts.Location = new Point(6, 52);
-            dgvProducts.Name = "dgvProducts";
-            dgvProducts.ReadOnly = true;
-            dgvProducts.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvProducts.RowHeadersVisible = false;
+            dgvSuppliers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvSuppliers.ColumnHeadersHeight = 30;
+            dgvSuppliers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvSuppliers.EnableHeadersVisualStyles = false;
+            dgvSuppliers.GridColor = Color.FromArgb(20, 45, 85);
+            dgvSuppliers.Location = new Point(6, 52);
+            dgvSuppliers.Name = "dgvSuppliers";
+            dgvSuppliers.ReadOnly = true;
+            dgvSuppliers.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvSuppliers.RowHeadersVisible = false;
             dataGridViewCellStyle2.BackColor = Color.White;
             dataGridViewCellStyle2.ForeColor = Color.FromArgb(20, 45, 85);
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(8, 86, 207);
-            dgvProducts.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            dgvProducts.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgvProducts.Size = new Size(545, 398);
-            dgvProducts.TabIndex = 14;
+            dgvSuppliers.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dgvSuppliers.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dgvSuppliers.Size = new Size(545, 398);
+            dgvSuppliers.TabIndex = 18;
             // 
-            // ProductsView
+            // SuppliersView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
             ClientSize = new Size(557, 458);
             Controls.Add(btnAdd);
             Controls.Add(btnSearch);
             Controls.Add(txtSearch);
-            Controls.Add(dgvProducts);
+            Controls.Add(dgvSuppliers);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "ProductsView";
-            Text = "ProductMaintainer_2";
-            ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
+            Name = "SuppliersView";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "SuppliersView";
+            ((System.ComponentModel.ISupportInitialize)dgvSuppliers).EndInit();
             ResumeLayout(false);
         }
 
@@ -158,6 +158,6 @@
         private FontAwesome.Sharp.IconButton btnAdd;
         private FontAwesome.Sharp.IconButton btnSearch;
         private MaterialSkin.Controls.MaterialTextBox txtSearch;
-        private DataGridView dgvProducts;
+        private DataGridView dgvSuppliers;
     }
 }

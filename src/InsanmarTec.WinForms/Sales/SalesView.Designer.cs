@@ -1,6 +1,6 @@
-﻿namespace InsanmarTec.WinForms.Views.ProductMaintainer
+﻿namespace InsanmarTec.WinForms.Sales
 {
-    partial class ProductsView
+    partial class SalesView
     {
         /// <summary>
         /// Required designer variable.
@@ -33,8 +33,8 @@
             btnAdd = new FontAwesome.Sharp.IconButton();
             btnSearch = new FontAwesome.Sharp.IconButton();
             txtSearch = new MaterialSkin.Controls.MaterialTextBox();
-            dgvProducts = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dgvProducts).BeginInit();
+            dgvSales = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvSales).BeginInit();
             SuspendLayout();
             // 
             // btnAdd
@@ -86,8 +86,8 @@
             txtSearch.AnimateReadOnly = false;
             txtSearch.BorderStyle = BorderStyle.None;
             txtSearch.Depth = 0;
-            txtSearch.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtSearch.Hint = "Buscar producto...";
+            txtSearch.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtSearch.Hint = "Buscar venta por codigo...";
             txtSearch.LeadingIcon = null;
             txtSearch.Location = new Point(6, 8);
             txtSearch.MaxLength = 50;
@@ -100,17 +100,17 @@
             txtSearch.TrailingIcon = null;
             txtSearch.UseTallSize = false;
             // 
-            // dgvProducts
+            // dgvSales
             // 
-            dgvProducts.AllowUserToAddRows = false;
-            dgvProducts.AllowUserToDeleteRows = false;
-            dgvProducts.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dgvProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvProducts.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvProducts.BackgroundColor = Color.White;
-            dgvProducts.BorderStyle = BorderStyle.None;
-            dgvProducts.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            dgvProducts.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvSales.AllowUserToAddRows = false;
+            dgvSales.AllowUserToDeleteRows = false;
+            dgvSales.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvSales.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvSales.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvSales.BackgroundColor = Color.White;
+            dgvSales.BorderStyle = BorderStyle.None;
+            dgvSales.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvSales.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(20, 45, 85);
             dataGridViewCellStyle1.Font = new Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -118,38 +118,37 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(8, 86, 207);
             dataGridViewCellStyle1.SelectionForeColor = Color.White;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgvProducts.ColumnHeadersHeight = 30;
-            dgvProducts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dgvProducts.EnableHeadersVisualStyles = false;
-            dgvProducts.GridColor = Color.FromArgb(20, 45, 85);
-            dgvProducts.Location = new Point(6, 52);
-            dgvProducts.Name = "dgvProducts";
-            dgvProducts.ReadOnly = true;
-            dgvProducts.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dgvProducts.RowHeadersVisible = false;
+            dgvSales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvSales.ColumnHeadersHeight = 30;
+            dgvSales.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dgvSales.EnableHeadersVisualStyles = false;
+            dgvSales.GridColor = Color.FromArgb(20, 45, 85);
+            dgvSales.Location = new Point(6, 52);
+            dgvSales.Name = "dgvSales";
+            dgvSales.ReadOnly = true;
+            dgvSales.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvSales.RowHeadersVisible = false;
             dataGridViewCellStyle2.BackColor = Color.White;
             dataGridViewCellStyle2.ForeColor = Color.FromArgb(20, 45, 85);
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(8, 86, 207);
-            dgvProducts.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            dgvProducts.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgvProducts.Size = new Size(545, 398);
-            dgvProducts.TabIndex = 14;
+            dgvSales.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dgvSales.SelectionMode = DataGridViewSelectionMode.CellSelect;
+            dgvSales.Size = new Size(545, 398);
+            dgvSales.TabIndex = 14;
             // 
-            // ProductsView
+            // SalesView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
             ClientSize = new Size(557, 458);
             Controls.Add(btnAdd);
             Controls.Add(btnSearch);
             Controls.Add(txtSearch);
-            Controls.Add(dgvProducts);
+            Controls.Add(dgvSales);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "ProductsView";
-            Text = "ProductMaintainer_2";
-            ((System.ComponentModel.ISupportInitialize)dgvProducts).EndInit();
+            Name = "SalesView";
+            Text = "SalesView";
+            ((System.ComponentModel.ISupportInitialize)dgvSales).EndInit();
             ResumeLayout(false);
         }
 
@@ -158,6 +157,6 @@
         private FontAwesome.Sharp.IconButton btnAdd;
         private FontAwesome.Sharp.IconButton btnSearch;
         private MaterialSkin.Controls.MaterialTextBox txtSearch;
-        private DataGridView dgvProducts;
+        private DataGridView dgvSales;
     }
 }
