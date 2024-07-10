@@ -1,6 +1,6 @@
 ﻿namespace InsanmarTec.WinForms.Views.ProductMaintainer
 {
-    partial class ProductMaintainer_1
+    partial class ProductsDetailsView
     {
         /// <summary>
         /// Required designer variable.

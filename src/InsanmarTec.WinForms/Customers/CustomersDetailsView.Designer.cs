@@ -1,6 +1,6 @@
 ﻿namespace InsanmarTec.WinForms.Views
 {
-    partial class CustomerMaintainer_1
+    partial class CustomersDetailsView
     {
         /// <summary>
         /// Required designer variable.

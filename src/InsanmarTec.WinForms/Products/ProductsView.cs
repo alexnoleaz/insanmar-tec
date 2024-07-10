@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace InsanmarTec.WinForms.money
+namespace InsanmarTec.WinForms.Views.ProductMaintainer
 {
-    public partial class payviewA : Form
+    public partial class ProductsView : Form
     {
-        public payviewA()
+        public ProductsView()
         {
             InitializeComponent();
         }

@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace InsanmarTec.WinForms.Views
 {
-    public partial class CustomerMaintainer_1 : Form, ITransientDependency
+    public partial class CustomersDetailsView : Form, ITransientDependency
     {
         private CustomerMaintainer_2 customerMaintainer2;
         private ToolTip toolTip;
 
-        public CustomerMaintainer_1()
+        public CustomersDetailsView()
         {
             InitializeComponent();
 

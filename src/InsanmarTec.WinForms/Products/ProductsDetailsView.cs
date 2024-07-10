@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace InsanmarTec.WinForms.Views.ProductMaintainer
 {
-    public partial class ProductMaintainer_1 : Form, ITransientDependency
+    public partial class ProductsDetailsView : Form, ITransientDependency
     {
-        public ProductMaintainer_1()
+        public ProductsDetailsView()
         {
             InitializeComponent();
         }
