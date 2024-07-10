@@ -86,8 +86,8 @@
             txtSearch.AnimateReadOnly = false;
             txtSearch.BorderStyle = BorderStyle.None;
             txtSearch.Depth = 0;
-            txtSearch.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtSearch.Hint = "Buscar moldelo por nombre...";
+            txtSearch.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtSearch.Hint = "Buscar modelo...";
             txtSearch.LeadingIcon = null;
             txtSearch.Location = new Point(6, 8);
             txtSearch.MaxLength = 50;

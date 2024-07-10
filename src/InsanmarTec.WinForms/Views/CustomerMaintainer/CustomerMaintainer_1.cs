@@ -31,11 +31,6 @@ namespace InsanmarTec.WinForms.Views
 
 
             // Mostrar o crear el formulario CustomerMaintainer_2 si no está inicializado
-            if (customerMaintainer2 == null || customerMaintainer2.IsDisposed)
-            {
-                customerMaintainer2 = new CustomerMaintainer_2();
-                customerMaintainer2.Show();
-            }
 
             // Pasar los datos al DataGridView en CustomerMaintainer_2
 

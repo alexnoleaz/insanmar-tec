@@ -1,6 +1,6 @@
-﻿namespace InsanmarTec.WinForms.Qualily
+﻿namespace InsanmarTec.WinForms.Views.Customers
 {
-    partial class QualityView
+    partial class CustomersView
     {
         /// <summary>
         /// Required designer variable.
@@ -56,7 +56,7 @@
             btnAdd.Location = new Point(442, 8);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(109, 36);
-            btnAdd.TabIndex = 13;
+            btnAdd.TabIndex = 17;
             btnAdd.Text = "Agregar";
             btnAdd.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAdd.UseVisualStyleBackColor = false;
@@ -77,7 +77,7 @@
             btnSearch.Location = new Point(395, 8);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(41, 36);
-            btnSearch.TabIndex = 12;
+            btnSearch.TabIndex = 16;
             btnSearch.UseVisualStyleBackColor = false;
             // 
             // txtSearch
@@ -86,8 +86,8 @@
             txtSearch.AnimateReadOnly = false;
             txtSearch.BorderStyle = BorderStyle.None;
             txtSearch.Depth = 0;
-            txtSearch.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtSearch.Hint = "Buscar calidad...";
+            txtSearch.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtSearch.Hint = "Buscar cliente...";
             txtSearch.LeadingIcon = null;
             txtSearch.Location = new Point(6, 8);
             txtSearch.MaxLength = 50;
@@ -95,7 +95,7 @@
             txtSearch.Multiline = false;
             txtSearch.Name = "txtSearch";
             txtSearch.Size = new Size(391, 36);
-            txtSearch.TabIndex = 11;
+            txtSearch.TabIndex = 15;
             txtSearch.Text = "";
             txtSearch.TrailingIcon = null;
             txtSearch.UseTallSize = false;
@@ -134,9 +134,9 @@
             dgvQuality.RowsDefaultCellStyle = dataGridViewCellStyle2;
             dgvQuality.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dgvQuality.Size = new Size(545, 398);
-            dgvQuality.TabIndex = 10;
+            dgvQuality.TabIndex = 14;
             // 
-            // QualityView
+            // CustomersView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -146,9 +146,9 @@
             Controls.Add(txtSearch);
             Controls.Add(dgvQuality);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "QualityView";
-            Padding = new Padding(3, 0, 3, 3);
-            Text = "QualityView";
+            Name = "CustomersView";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "CustomersView";
             ((System.ComponentModel.ISupportInitialize)dgvQuality).EndInit();
             ResumeLayout(false);
         }

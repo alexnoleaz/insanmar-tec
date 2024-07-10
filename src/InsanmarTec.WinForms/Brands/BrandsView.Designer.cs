@@ -89,7 +89,7 @@
             txtSearch.BorderStyle = BorderStyle.None;
             txtSearch.Depth = 0;
             txtSearch.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtSearch.Hint = "Buscar marca por nombre...";
+            txtSearch.Hint = "Buscar marca...";
             txtSearch.LeadingIcon = null;
             txtSearch.Location = new Point(6, 10);
             txtSearch.MaxLength = 50;

@@ -33,8 +33,6 @@
             btnCancel = new MaterialSkin.Controls.MaterialButton();
             txtName = new MaterialSkin.Controls.MaterialTextBox();
             btnSave = new MaterialSkin.Controls.MaterialButton();
-            txtDescription = new MaterialSkin.Controls.MaterialTextBox();
-            txtCategory = new MaterialSkin.Controls.MaterialTextBox();
             materialCard1.SuspendLayout();
             SuspendLayout();
             // 
@@ -45,8 +43,6 @@
             materialCard1.Controls.Add(btnCancel);
             materialCard1.Controls.Add(txtName);
             materialCard1.Controls.Add(btnSave);
-            materialCard1.Controls.Add(txtDescription);
-            materialCard1.Controls.Add(txtCategory);
             materialCard1.Depth = 0;
             materialCard1.ForeColor = Color.FromArgb(222, 0, 0, 0);
             materialCard1.Location = new Point(9, 7);
@@ -54,7 +50,7 @@
             materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
             materialCard1.Name = "materialCard1";
             materialCard1.Padding = new Padding(14);
-            materialCard1.Size = new Size(339, 253);
+            materialCard1.Size = new Size(339, 149);
             materialCard1.TabIndex = 8;
             // 
             // lblTitle
@@ -76,7 +72,7 @@
             btnCancel.Depth = 0;
             btnCancel.HighEmphasis = true;
             btnCancel.Icon = null;
-            btnCancel.Location = new Point(167, 204);
+            btnCancel.Location = new Point(167, 94);
             btnCancel.Margin = new Padding(4, 6, 4, 6);
             btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
             btnCancel.Name = "btnCancel";
@@ -93,7 +89,7 @@
             txtName.AnimateReadOnly = false;
             txtName.BorderStyle = BorderStyle.None;
             txtName.Depth = 0;
-            txtName.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtName.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtName.Hint = "Nombre";
             txtName.LeadingIcon = null;
             txtName.Location = new Point(37, 33);
@@ -113,7 +109,7 @@
             btnSave.Depth = 0;
             btnSave.HighEmphasis = true;
             btnSave.Icon = null;
-            btnSave.Location = new Point(71, 204);
+            btnSave.Location = new Point(71, 94);
             btnSave.Margin = new Padding(4, 6, 4, 6);
             btnSave.MouseState = MaterialSkin.MouseState.HOVER;
             btnSave.Name = "btnSave";
@@ -125,47 +121,11 @@
             btnSave.UseAccentColor = false;
             btnSave.UseVisualStyleBackColor = true;
             // 
-            // txtDescription
-            // 
-            txtDescription.AnimateReadOnly = false;
-            txtDescription.BorderStyle = BorderStyle.None;
-            txtDescription.Depth = 0;
-            txtDescription.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtDescription.Hint = "Descripción";
-            txtDescription.LeadingIcon = null;
-            txtDescription.Location = new Point(37, 89);
-            txtDescription.MaxLength = 50;
-            txtDescription.MouseState = MaterialSkin.MouseState.OUT;
-            txtDescription.Multiline = false;
-            txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(264, 50);
-            txtDescription.TabIndex = 1;
-            txtDescription.Text = "";
-            txtDescription.TrailingIcon = null;
-            // 
-            // txtCategory
-            // 
-            txtCategory.AnimateReadOnly = false;
-            txtCategory.BorderStyle = BorderStyle.None;
-            txtCategory.Depth = 0;
-            txtCategory.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtCategory.Hint = "Categoría";
-            txtCategory.LeadingIcon = null;
-            txtCategory.Location = new Point(37, 145);
-            txtCategory.MaxLength = 50;
-            txtCategory.MouseState = MaterialSkin.MouseState.OUT;
-            txtCategory.Multiline = false;
-            txtCategory.Name = "txtCategory";
-            txtCategory.Size = new Size(264, 50);
-            txtCategory.TabIndex = 2;
-            txtCategory.Text = "";
-            txtCategory.TrailingIcon = null;
-            // 
             // ModelsDetailsView
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(356, 266);
+            ClientSize = new Size(356, 162);
             Controls.Add(materialCard1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ModelsDetailsView";
@@ -183,7 +143,5 @@
         private MaterialSkin.Controls.MaterialButton btnCancel;
         private MaterialSkin.Controls.MaterialTextBox txtName;
         private MaterialSkin.Controls.MaterialButton btnSave;
-        private MaterialSkin.Controls.MaterialTextBox txtDescription;
-        private MaterialSkin.Controls.MaterialTextBox txtCategory;
     }
 }
