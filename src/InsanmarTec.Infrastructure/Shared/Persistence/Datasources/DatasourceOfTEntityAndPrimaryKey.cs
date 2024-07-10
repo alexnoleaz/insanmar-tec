@@ -143,7 +143,7 @@ namespace InsanmarTec.Infrastructure.Shared.Persistence.Datasources
                 _context.SaveChanges();
                 return entitySaved;
             }
-            catch (DbUpdateException ex)
+            catch (DbUpdateException)
             {
                 foreach (
                     var entry in _context
