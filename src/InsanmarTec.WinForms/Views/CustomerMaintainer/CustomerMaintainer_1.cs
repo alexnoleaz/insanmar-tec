@@ -20,12 +20,6 @@ namespace InsanmarTec.WinForms.Views
         public CustomerMaintainer_1()
         {
             InitializeComponent();
-            CMBTIPCLI.SelectedIndexChanged += new EventHandler(CMBTIPCLI_SelectedIndexChanged);
-
-            // Agregar elementos al ComboBox
-            CMBTIPCLI.Items.Add("Cliente Frecuente");
-            CMBTIPCLI.Items.Add("Cliente Ocasional");
-            CMBTIPCLI.Items.Add("Cliente Inactivo");
 
             // Inicializar ToolTip
             toolTip = new ToolTip();
@@ -34,15 +28,6 @@ namespace InsanmarTec.WinForms.Views
 
         private void BTNGRABAR_Click(object sender, EventArgs e)
         {            // Capturar los datos de los controles
-            string dni = DNI1.Text;
-            string nombrecompleto = NOMCOMP.Text;
-            string telefono1 = TELE1.Text;
-            string telefonoadicional = TELEADI.Text;
-            string direccion = DIREC.Text;
-            string tipocliente = CMBTIPCLI.SelectedItem != null ? CMBTIPCLI.SelectedItem.ToString() : string.Empty;
-            string correoelectronico = CORELEC.Text;
-            DateTime fecha = datTiPickFECH.Value;
-            DateTime fechacumple = datTiPickCUM.Value;
 
 
             // Mostrar o crear el formulario CustomerMaintainer_2 si no está inicializado
@@ -53,7 +38,6 @@ namespace InsanmarTec.WinForms.Views
             }
 
             // Pasar los datos al DataGridView en CustomerMaintainer_2
-            customerMaintainer2.AddCustomerData(dni, nombrecompleto, telefono1, telefonoadicional, direccion, tipocliente, correoelectronico, fecha, fechacumple);
 
             // Limpiar los controles del formulario CustomerMaintainer_1
             LimpiarControles();
@@ -61,15 +45,6 @@ namespace InsanmarTec.WinForms.Views
 
         private void LimpiarControles()
         {
-            DNI1.Text = "";
-            NOMCOMP.Text = "";
-            TELE1.Text = "";
-            TELEADI.Text = "";
-            DIREC.Text = "";
-            CORELEC.Text = "";
-            CMBTIPCLI.SelectedIndex = -1;
-            datTiPickFECH.Value = DateTime.Today;
-            datTiPickCUM.Value = DateTime.Today;
         }
 
         private void DNI1_TextChanged(object sender, EventArgs e)
@@ -137,13 +112,6 @@ namespace InsanmarTec.WinForms.Views
 
         private void CMBTIPCLI_SelectedIndexChanged(object sender, EventArgs e)
         {// Lógica a ejecutar cuando se cambie la selección
-            if (CMBTIPCLI.SelectedItem != null)
-            {
-                string selectedClientType = CMBTIPCLI.SelectedItem.ToString();
-
-                // Mostrar ToolTip cerca del ComboBox
-                toolTip.Show("Seleccionaste: " + selectedClientType, CMBTIPCLI, CMBTIPCLI.Width / 1, CMBTIPCLI.Height / 1, 1000);
-            }
 
 
         }

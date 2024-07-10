@@ -39,15 +39,6 @@ namespace InsanmarTec.WinForms.Views
             }
 
             // Obtener los valores de los campos
-            string codigoProveedor = codprov.Text;
-            string nombreCompleto = nomcomp.Text;
-            string telefono = telef.Text;
-            string direccion = direc.Text;
-            string ruc = ruc1.Text;
-            string rubro = rubro1.SelectedItem?.ToString(); // Obtener el valor seleccionado del ComboBox
-            string razonSocial = razsoci.Text;
-            string correoElectronico = corelec.Text;
-
             // Si no se ha creado la instancia de ProviderMaintainer_2, la creamos
             if (form2Instance == null || form2Instance.IsDisposed)
             {
@@ -56,7 +47,6 @@ namespace InsanmarTec.WinForms.Views
             }
 
             // Agregar proveedor al formulario ProviderMaintainer_2
-            form2Instance.AgregarProveedor(codigoProveedor, nombreCompleto, telefono, direccion, ruc, rubro, razonSocial, correoElectronico, fechaSeleccionada);
 
             // Limpiar campos después de grabar
             LimpiarCampos();
@@ -74,15 +64,6 @@ namespace InsanmarTec.WinForms.Views
         private void LimpiarCampos()
         {
             // Limpiar todos los TextBox y ComboBox
-            codprov.Text = "";
-            nomcomp.Text = "";
-            telef.Text = "";
-            direc.Text = "";
-            ruc1.Text = "";
-            rubro1.SelectedIndex = -1; // Limpiar selección en ComboBox
-            razsoci.Text = "";
-            corelec.Text = "";
-
             // Limpiar fecha seleccionada
             fechaSeleccionada = DateTime.MinValue; // o cualquier valor inicial que prefieras
         }
@@ -168,7 +149,6 @@ namespace InsanmarTec.WinForms.Views
 
         private void datTimPickProv_ValueChanged(object sender, EventArgs e)
         {
-            fechaSeleccionada = datTimPickProv.Value;
 
         }
     }
