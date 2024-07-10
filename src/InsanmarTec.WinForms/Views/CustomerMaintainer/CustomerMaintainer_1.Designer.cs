@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             product = new MaterialSkin.Controls.MaterialCard();
-            this.txtCorr = new MaterialSkin.Controls.MaterialTextBox();
-            this.cmbclien = new MaterialSkin.Controls.MaterialComboBox();
             txtDirection = new MaterialSkin.Controls.MaterialTextBox();
             lblTitle = new MaterialSkin.Controls.MaterialLabel();
             btnCancel = new MaterialSkin.Controls.MaterialButton();
@@ -47,8 +45,6 @@
             product.BackColor = Color.FromArgb(255, 255, 255);
             product.Controls.Add(txtPhoneadd);
             product.Controls.Add(txtPhone);
-            product.Controls.Add(this.txtCorr);
-            product.Controls.Add(this.cmbclien);
             product.Controls.Add(txtDirection);
             product.Controls.Add(lblTitle);
             product.Controls.Add(btnCancel);
@@ -64,47 +60,6 @@
             product.Padding = new Padding(14);
             product.Size = new Size(434, 388);
             product.TabIndex = 8;
-            // 
-            // txtCorr
-            // 
-            this.txtCorr.AnimateReadOnly = false;
-            this.txtCorr.BorderStyle = BorderStyle.None;
-            this.txtCorr.Depth = 0;
-            this.txtCorr.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            this.txtCorr.Hint = "Correo electrónico";
-            this.txtCorr.LeadingIcon = null;
-            this.txtCorr.Location = new Point(37, 258);
-            this.txtCorr.MaxLength = 50;
-            this.txtCorr.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtCorr.Multiline = false;
-            this.txtCorr.Name = "txtCorr";
-            this.txtCorr.Size = new Size(367, 50);
-            this.txtCorr.TabIndex = 14;
-            this.txtCorr.Text = "";
-            this.txtCorr.TrailingIcon = null;
-            // 
-            // cmbclien
-            // 
-            this.cmbclien.AutoResize = false;
-            this.cmbclien.BackColor = Color.FromArgb(255, 255, 255);
-            this.cmbclien.Depth = 0;
-            this.cmbclien.DrawMode = DrawMode.OwnerDrawVariable;
-            this.cmbclien.DropDownHeight = 174;
-            this.cmbclien.DropDownStyle = ComboBoxStyle.DropDownList;
-            this.cmbclien.DropDownWidth = 121;
-            this.cmbclien.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
-            this.cmbclien.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            this.cmbclien.FormattingEnabled = true;
-            this.cmbclien.Hint = "Tipo de cliente";
-            this.cmbclien.IntegralHeight = false;
-            this.cmbclien.ItemHeight = 43;
-            this.cmbclien.Location = new Point(118, 203);
-            this.cmbclien.MaxDropDownItems = 4;
-            this.cmbclien.MouseState = MaterialSkin.MouseState.OUT;
-            this.cmbclien.Name = "cmbclien";
-            this.cmbclien.Size = new Size(173, 49);
-            this.cmbclien.StartIndex = 0;
-            this.cmbclien.TabIndex = 12;
             // 
             // txtDirection
             // 
