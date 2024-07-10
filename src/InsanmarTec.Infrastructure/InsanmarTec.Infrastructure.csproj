@@ -22,4 +22,8 @@
     <ProjectReference Include="..\InsanmarTec.Domain\InsanmarTec.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="StockMovements\" />
+  </ItemGroup>
+
 </Project>

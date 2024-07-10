@@ -50,7 +50,7 @@ namespace InsanmarTec.Application.Auth
 
             try
             {
-                var userDb = await _userRepository.Get(input.Username!);
+                var userDb = await _userRepository.Get(u => u.Username == input.Username!);
                 if (!_passwordHasher.Compare(userDb.Password, input.Password!))
                     return Result<UserDto>.Failure(responseMessage);
 

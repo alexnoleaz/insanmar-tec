@@ -1,3 +1,4 @@
+using System.Linq.Expressions;
 using InsanmarTec.Domain.Shared.Repositories;
 
 namespace InsanmarTec.Domain.Brands
@@ -6,5 +7,6 @@ namespace InsanmarTec.Domain.Brands
     {
         Task Deactivate(int id);
         Task Activate(int id);
+        Task<Brand> Get(Expression<Func<Brand, bool>> predicate);
     }
 }

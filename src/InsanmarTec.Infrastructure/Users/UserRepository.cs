@@ -1,4 +1,5 @@
-﻿using InsanmarTec.Domain.Auth.Users;
+﻿using System.Linq.Expressions;
+using InsanmarTec.Domain.Auth.Users;
 using InsanmarTec.Domain.Shared.Datasources;
 using InsanmarTec.Domain.Shared.Entities;
 using InsanmarTec.Infrastructure.Shared.Repositories;
@@ -13,10 +14,10 @@ namespace InsanmarTec.Infrastructure.Users
         public UserRepository(IDatasource<User> userRepository)
             : base(userRepository) => _userRepository = userRepository;
 
-        public async Task<User> Get(string username)
+        public async Task<User> Get(Expression<Func<User, bool>> predicate)
         {
             var query = await _userRepository.GetAllReadonlyIncludingAsync(u => u.Roles);
-            return await query.FirstOrDefaultAsync(u => u.Username == username)
+            return await query.FirstOrDefaultAsync(predicate)
                 ?? throw new EntityNotFoundException("User not found.");
         }
 
