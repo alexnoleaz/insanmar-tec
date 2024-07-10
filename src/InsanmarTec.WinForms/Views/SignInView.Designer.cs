@@ -37,6 +37,7 @@
             btnSignIn = new MaterialSkin.Controls.MaterialButton();
             lblTitle = new MaterialSkin.Controls.MaterialLabel();
             errorProvider = new ErrorProvider(components);
+            lblMessage = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             signInCard.SuspendLayout();
@@ -48,9 +49,8 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(243, 373);
+            panel1.Size = new Size(213, 280);
             panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -58,9 +58,8 @@
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = Properties.Resources.insanmar_logo;
             pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(243, 373);
+            pictureBox1.Size = new Size(213, 280);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -73,12 +72,12 @@
             signInCard.Controls.Add(btnSignIn);
             signInCard.Depth = 0;
             signInCard.ForeColor = Color.FromArgb(222, 0, 0, 0);
-            signInCard.Location = new Point(263, 81);
-            signInCard.Margin = new Padding(16, 19, 16, 19);
+            signInCard.Location = new Point(230, 61);
+            signInCard.Margin = new Padding(14);
             signInCard.MouseState = MaterialSkin.MouseState.HOVER;
             signInCard.Name = "signInCard";
-            signInCard.Padding = new Padding(16, 19, 16, 19);
-            signInCard.Size = new Size(376, 268);
+            signInCard.Padding = new Padding(14);
+            signInCard.Size = new Size(329, 201);
             signInCard.TabIndex = 1;
             // 
             // txtPassword
@@ -89,14 +88,13 @@
             txtPassword.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtPassword.Hint = "Contraseña";
             txtPassword.LeadingIcon = null;
-            txtPassword.Location = new Point(47, 117);
-            txtPassword.Margin = new Padding(3, 4, 3, 4);
+            txtPassword.Location = new Point(41, 88);
             txtPassword.MaxLength = 50;
             txtPassword.MouseState = MaterialSkin.MouseState.OUT;
             txtPassword.Multiline = false;
             txtPassword.Name = "txtPassword";
             txtPassword.Password = true;
-            txtPassword.Size = new Size(287, 50);
+            txtPassword.Size = new Size(251, 50);
             txtPassword.TabIndex = 2;
             txtPassword.Text = "";
             txtPassword.TrailingIcon = null;
@@ -110,13 +108,12 @@
             txtUsername.Font = new Font("Roboto", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
             txtUsername.Hint = "Nombre de usuario";
             txtUsername.LeadingIcon = null;
-            txtUsername.Location = new Point(47, 31);
-            txtUsername.Margin = new Padding(3, 4, 3, 4);
+            txtUsername.Location = new Point(41, 23);
             txtUsername.MaxLength = 50;
             txtUsername.MouseState = MaterialSkin.MouseState.OUT;
             txtUsername.Multiline = false;
             txtUsername.Name = "txtUsername";
-            txtUsername.Size = new Size(287, 50);
+            txtUsername.Size = new Size(251, 50);
             txtUsername.TabIndex = 1;
             txtUsername.Text = "";
             txtUsername.TrailingIcon = null;
@@ -127,12 +124,12 @@
             btnSignIn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             btnSignIn.CharacterCasing = MaterialSkin.Controls.MaterialButton.CharacterCasingEnum.Normal;
             btnSignIn.Cursor = Cursors.Hand;
-            btnSignIn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnSignIn.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Dense;
             btnSignIn.Depth = 0;
             btnSignIn.HighEmphasis = true;
             btnSignIn.Icon = null;
-            btnSignIn.Location = new Point(117, 192);
-            btnSignIn.Margin = new Padding(5, 8, 5, 8);
+            btnSignIn.Location = new Point(106, 146);
+            btnSignIn.Margin = new Padding(4, 6, 4, 6);
             btnSignIn.MouseState = MaterialSkin.MouseState.HOVER;
             btnSignIn.Name = "btnSignIn";
             btnSignIn.NoAccentTextColor = Color.Empty;
@@ -148,12 +145,12 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Depth = 0;
-            lblTitle.Font = new Font("Roboto Medium", 20F, FontStyle.Bold, GraphicsUnit.Pixel);
-            lblTitle.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            lblTitle.Location = new Point(312, 31);
+            lblTitle.Font = new Font("Roboto", 24F, FontStyle.Bold, GraphicsUnit.Pixel);
+            lblTitle.FontType = MaterialSkin.MaterialSkinManager.fontType.H5;
+            lblTitle.Location = new Point(234, 20);
             lblTitle.MouseState = MaterialSkin.MouseState.HOVER;
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(270, 24);
+            lblTitle.Size = new Size(323, 29);
             lblTitle.TabIndex = 5;
             lblTitle.Text = "Iniciar Sesión en InsanmarTec";
             // 
@@ -162,17 +159,27 @@
             errorProvider.BlinkStyle = ErrorBlinkStyle.NeverBlink;
             errorProvider.ContainerControl = this;
             // 
+            // lblMessage
+            // 
+            lblMessage.AutoSize = true;
+            lblMessage.Font = new Font("Segoe UI Emoji", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblMessage.ForeColor = Color.Red;
+            lblMessage.Location = new Point(244, 42);
+            lblMessage.Name = "lblMessage";
+            lblMessage.Size = new Size(0, 16);
+            lblMessage.TabIndex = 6;
+            // 
             // SignInView
             // 
             AcceptButton = btnSignIn;
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(664, 373);
+            ClientSize = new Size(581, 280);
+            Controls.Add(lblMessage);
             Controls.Add(lblTitle);
             Controls.Add(signInCard);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "SignInView";
             ShowIcon = false;
@@ -197,5 +204,6 @@
         private ErrorProvider errorProvider;
         private MaterialSkin.Controls.MaterialTextBox txtPassword;
         private MaterialSkin.Controls.MaterialTextBox txtUsername;
+        private Label lblMessage;
     }
 }

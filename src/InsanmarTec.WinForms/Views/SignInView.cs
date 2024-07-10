@@ -1,30 +1,36 @@
 ﻿using InsanmarTec.Application.Auth;
 using InsanmarTec.Domain.Shared.Dependency;
+using InsanmarTec.WinForms.Shared;
 using MaterialSkin.Controls;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace InsanmarTec.WinForms.Views
 {
     public partial class SignInView : Form, ITransientDependency
     {
         private readonly SignInHandler _signInHandler;
+        private readonly IServiceProvider _container;
 
-        public SignInView(SignInHandler signInHandler)
+        public SignInView(SignInHandler signInHandler, IServiceProvider container)
         {
             InitializeComponent();
             _signInHandler = signInHandler;
+            _container = container;
         }
 
         private async void SignInOnClick(object sender, EventArgs e)
         {
+            ViewHelper.ClearInputs(errorProvider);
+
             if (txtUsername.Text == string.Empty || string.IsNullOrWhiteSpace(txtUsername.Text))
             {
-                ShowErrorMessage(txtUsername, "Campo obligatorio.");
+                ViewHelper.ShowErrorMessage(txtUsername, errorProvider);
                 return;
             }
 
             if (txtPassword.Text == string.Empty || string.IsNullOrWhiteSpace(txtPassword.Text))
             {
-                ShowErrorMessage(txtPassword, "Campo obligatorio.");
+                ViewHelper.ShowErrorMessage(txtPassword, errorProvider);
                 return;
             }
 
@@ -38,22 +44,28 @@ namespace InsanmarTec.WinForms.Views
             var result = await _signInHandler.Execute(signInDto);
             if (!result.IsSuccess)
             {
-                MessageBox.Show(
-                    result.ErrorMessage?.Split(",")[0],
-                    null,
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error
-                );
-                errorProvider.Clear();
+                ShowErrorMessage("Nombre de usuario o contraseña incorrecta.");
+                ViewHelper.ClearInputs(errorProvider, [txtPassword]);
                 DisableOrEnableButton(true);
                 return;
             }
 
             var user = result.Value;
-
             DisableOrEnableButton(false);
-            MessageBox.Show("Sesión iniciada correctamente");
-            errorProvider.Clear();
+
+            var mainView = _container.GetRequiredService<MainView>();
+            mainView.User = user!;
+
+            Hide();
+            if (mainView.ShowDialog() is DialogResult.Cancel)
+            {
+                System.Windows.Forms.Application.Exit();
+                return;
+            }
+
+            Show();
+            ViewHelper.ClearInputs(errorProvider, [txtUsername, txtPassword]);
+            txtUsername.Focus();
             DisableOrEnableButton(true);
         }
 
@@ -70,18 +82,6 @@ namespace InsanmarTec.WinForms.Views
             btnSignIn.Text = "Iniciar sesión";
         }
 
-        private void ShowErrorMessage(MaterialTextBox control, string message)
-        {
-            errorProvider.SetError(control, message);
-            errorProvider.Icon = SystemIcons.Warning;
-            control.Focus();
-        }
-
-        private void InitializeTextBoxes()
-        {
-            errorProvider.Clear();
-            txtUsername.Clear();
-            txtPassword.Clear();
-        }
+        private void ShowErrorMessage(string message) => lblMessage.Text = message;
     }
 }

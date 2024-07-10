@@ -4,7 +4,7 @@ using InsanmarTec.Domain.Shared.Datasources;
 using InsanmarTec.Infrastructure.Shared.Persistence;
 using InsanmarTec.Infrastructure.Shared.Persistence.Datasources;
 using InsanmarTec.WinForms.Views;
-using InsanmarTec.WinForms.Views.ProductMaintainer;
+using InsanmarTec.WinForms.Views.ProviderMaintainer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,7 +24,7 @@ namespace InsanmarTec.WinForms
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             System.Windows.Forms.Application.Run(
-                CreateHostBuilder().Build().Services.GetRequiredService<ProductMaintainer_1>()
+                CreateHostBuilder().Build().Services.GetRequiredService<CustomerMaintainer_1>()
             );
         }
 
