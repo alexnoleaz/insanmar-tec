@@ -17,7 +17,7 @@ namespace InsanmarTec.Application.Brands.Features
             _objectMapper = objectMapper;
         }
 
-        public async Task<Result> Execute(CreateBrandDto input)
+        public async Task<Result> Execute(CreateSuppliersDto input)
         {
             var result = BrandValidator.Validate(input);
             if (!result.IsValid)

@@ -1,6 +1,6 @@
 ﻿namespace InsanmarTec.Application.Brands.Dtos
 {
-    public class CreateBrandDto
+    public class CreateSuppliersDto
     {
         public string Name { get; set; } = null!;
         public string Description { get; set; } = null!;

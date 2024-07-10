@@ -56,7 +56,7 @@ namespace InsanmarTec.WinForms.Brands
                 if (!result.IsSuccess)
                     return;
 
-                var updateBrandDto = new UpdateBrandDto
+                var updateBrandDto = new UpdateSuppliersDto
                 {
                     Id = _brand.Id,
                     Description = txtDescription.Text.Trim(),
@@ -85,7 +85,7 @@ namespace InsanmarTec.WinForms.Brands
                 if (!result.IsSuccess)
                     return;
 
-                var createBrandDto = new CreateBrandDto
+                var createBrandDto = new CreateSuppliersDto
                 {
                     Name = txtName.Text.Trim(),
                     Description = txtDescription.Text.Trim(),
