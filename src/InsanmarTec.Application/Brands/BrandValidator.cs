@@ -29,6 +29,11 @@ namespace InsanmarTec.Application.Brands
             return result;
         }
 
+       /* internal static object Validate(Suppliers.Dtos.UpdatDeBrandto input)
+        {
+            throw new NotImplementedException();
+        }*/
+
         private static void ValidateCommonFields(
             string description,
             string category,
