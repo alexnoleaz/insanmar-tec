@@ -28,265 +28,252 @@
         /// </summary>
         private void InitializeComponent()
         {
-            CodPro = new Label();
-            corelec = new TextBox();
-            groupBox1 = new GroupBox();
-            btnGrab = new Button();
-            rubro1 = new ComboBox();
-            datTimPickProv = new DateTimePicker();
-            razsoci = new TextBox();
-            label4 = new Label();
-            label3 = new Label();
-            nomcomp = new TextBox();
-            codprov = new TextBox();
-            telef = new TextBox();
-            label2 = new Label();
-            ruc1 = new TextBox();
-            label1 = new Label();
-            Rub = new Label();
-            RazSoc = new Label();
-            direc = new TextBox();
-            RUCProv = new Label();
-            groupBox1.SuspendLayout();
+            product = new MaterialSkin.Controls.MaterialCard();
+            txtCorr = new MaterialSkin.Controls.MaterialTextBox();
+            cmbTypeClie = new MaterialSkin.Controls.MaterialComboBox();
+            txtDescription = new MaterialSkin.Controls.MaterialTextBox();
+            lblTitle = new MaterialSkin.Controls.MaterialLabel();
+            btnCancel = new MaterialSkin.Controls.MaterialButton();
+            txtCustomer = new MaterialSkin.Controls.MaterialTextBox();
+            btnSave = new MaterialSkin.Controls.MaterialButton();
+            txtName = new MaterialSkin.Controls.MaterialTextBox();
+            materialTextBox2 = new MaterialSkin.Controls.MaterialTextBox();
+            materialTextBox3 = new MaterialSkin.Controls.MaterialTextBox();
+            product.SuspendLayout();
             SuspendLayout();
             // 
-            // CodPro
+            // product
             // 
-            CodPro.AutoSize = true;
-            CodPro.BackColor = SystemColors.InactiveCaption;
-            CodPro.Font = new Font("Lucida Fax", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            CodPro.Location = new Point(30, 60);
-            CodPro.Name = "CodPro";
-            CodPro.Size = new Size(147, 17);
-            CodPro.TabIndex = 0;
-            CodPro.Text = "Codigo Proveedor:";
+            product.BackColor = Color.FromArgb(255, 255, 255);
+            product.Controls.Add(materialTextBox3);
+            product.Controls.Add(materialTextBox2);
+            product.Controls.Add(txtCorr);
+            product.Controls.Add(cmbTypeClie);
+            product.Controls.Add(txtDescription);
+            product.Controls.Add(lblTitle);
+            product.Controls.Add(btnCancel);
+            product.Controls.Add(txtCustomer);
+            product.Controls.Add(btnSave);
+            product.Controls.Add(txtName);
+            product.Depth = 0;
+            product.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            product.Location = new Point(4, 10);
+            product.Margin = new Padding(14);
+            product.MouseState = MaterialSkin.MouseState.HOVER;
+            product.Name = "product";
+            product.Padding = new Padding(14);
+            product.Size = new Size(434, 388);
+            product.TabIndex = 8;
             // 
-            // corelec
+            // txtCorr
             // 
-            corelec.Location = new Point(291, 277);
-            corelec.Name = "corelec";
-            corelec.Size = new Size(271, 25);
-            corelec.TabIndex = 1;
-            corelec.TextChanged += corelec_TextChanged;
+            txtCorr.AnimateReadOnly = false;
+            txtCorr.BorderStyle = BorderStyle.None;
+            txtCorr.Depth = 0;
+            txtCorr.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtCorr.Hint = "Correo electrónico";
+            txtCorr.LeadingIcon = null;
+            txtCorr.Location = new Point(84, 255);
+            txtCorr.MaxLength = 50;
+            txtCorr.MouseState = MaterialSkin.MouseState.OUT;
+            txtCorr.Multiline = false;
+            txtCorr.Name = "txtCorr";
+            txtCorr.Size = new Size(248, 50);
+            txtCorr.TabIndex = 14;
+            txtCorr.Text = "";
+            txtCorr.TrailingIcon = null;
             // 
-            // groupBox1
+            // cmbTypeClie
             // 
-            groupBox1.Controls.Add(btnGrab);
-            groupBox1.Controls.Add(rubro1);
-            groupBox1.Controls.Add(datTimPickProv);
-            groupBox1.Controls.Add(razsoci);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(nomcomp);
-            groupBox1.Controls.Add(codprov);
-            groupBox1.Controls.Add(telef);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(ruc1);
-            groupBox1.Controls.Add(label1);
-            groupBox1.Controls.Add(Rub);
-            groupBox1.Controls.Add(RazSoc);
-            groupBox1.Controls.Add(direc);
-            groupBox1.Controls.Add(RUCProv);
-            groupBox1.Controls.Add(CodPro);
-            groupBox1.Controls.Add(corelec);
-            groupBox1.Font = new Font("Lucida Fax", 11.25F);
-            groupBox1.Location = new Point(12, 6);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(596, 392);
-            groupBox1.TabIndex = 3;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Datos del Proveedor";
+            cmbTypeClie.AutoResize = false;
+            cmbTypeClie.BackColor = Color.FromArgb(255, 255, 255);
+            cmbTypeClie.Depth = 0;
+            cmbTypeClie.DrawMode = DrawMode.OwnerDrawVariable;
+            cmbTypeClie.DropDownHeight = 174;
+            cmbTypeClie.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbTypeClie.DropDownWidth = 121;
+            cmbTypeClie.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold, GraphicsUnit.Pixel);
+            cmbTypeClie.ForeColor = Color.FromArgb(222, 0, 0, 0);
+            cmbTypeClie.FormattingEnabled = true;
+            cmbTypeClie.Hint = "Tipo de cliente";
+            cmbTypeClie.IntegralHeight = false;
+            cmbTypeClie.ItemHeight = 43;
+            cmbTypeClie.Location = new Point(120, 203);
+            cmbTypeClie.MaxDropDownItems = 4;
+            cmbTypeClie.MouseState = MaterialSkin.MouseState.OUT;
+            cmbTypeClie.Name = "cmbTypeClie";
+            cmbTypeClie.Size = new Size(173, 49);
+            cmbTypeClie.StartIndex = 0;
+            cmbTypeClie.TabIndex = 12;
             // 
-            // btnGrab
+            // txtDescription
             // 
-            btnGrab.BackColor = SystemColors.InactiveCaption;
-            btnGrab.Font = new Font("Lucida Fax", 11.25F);
-            btnGrab.Location = new Point(231, 341);
-            btnGrab.Name = "btnGrab";
-            btnGrab.Size = new Size(118, 54);
-            btnGrab.TabIndex = 18;
-            btnGrab.Text = "Grabar";
-            btnGrab.UseVisualStyleBackColor = false;
-            btnGrab.Click += btnGrab_Click;
+            txtDescription.AnimateReadOnly = false;
+            txtDescription.BorderStyle = BorderStyle.None;
+            txtDescription.Depth = 0;
+            txtDescription.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtDescription.Hint = "Dirección";
+            txtDescription.LeadingIcon = null;
+            txtDescription.Location = new Point(37, 145);
+            txtDescription.MaxLength = 50;
+            txtDescription.MouseState = MaterialSkin.MouseState.OUT;
+            txtDescription.Multiline = false;
+            txtDescription.Name = "txtDescription";
+            txtDescription.Size = new Size(367, 50);
+            txtDescription.TabIndex = 10;
+            txtDescription.Text = "";
+            txtDescription.TrailingIcon = null;
             // 
-            // rubro1
+            // lblTitle
             // 
-            rubro1.FormattingEnabled = true;
-            rubro1.Location = new Point(291, 211);
-            rubro1.Name = "rubro1";
-            rubro1.Size = new Size(176, 25);
-            rubro1.TabIndex = 17;
-            rubro1.SelectedIndexChanged += rubro1_SelectedIndexChanged;
+            lblTitle.AutoSize = true;
+            lblTitle.Depth = 0;
+            lblTitle.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            lblTitle.Location = new Point(37, 9);
+            lblTitle.MouseState = MaterialSkin.MouseState.HOVER;
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(106, 19);
+            lblTitle.TabIndex = 3;
+            lblTitle.Text = "DetallesCliente";
             // 
-            // datTimPickProv
+            // btnCancel
             // 
-            datTimPickProv.Location = new Point(263, 0);
-            datTimPickProv.Name = "datTimPickProv";
-            datTimPickProv.Size = new Size(322, 25);
-            datTimPickProv.TabIndex = 16;
-            datTimPickProv.ValueChanged += datTimPickProv_ValueChanged;
+            btnCancel.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnCancel.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnCancel.Depth = 0;
+            btnCancel.HighEmphasis = true;
+            btnCancel.Icon = null;
+            btnCancel.Location = new Point(216, 332);
+            btnCancel.Margin = new Padding(4, 6, 4, 6);
+            btnCancel.MouseState = MaterialSkin.MouseState.HOVER;
+            btnCancel.Name = "btnCancel";
+            btnCancel.NoAccentTextColor = Color.Empty;
+            btnCancel.Size = new Size(96, 36);
+            btnCancel.TabIndex = 5;
+            btnCancel.Text = "Cancelar";
+            btnCancel.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
+            btnCancel.UseAccentColor = false;
+            btnCancel.UseVisualStyleBackColor = true;
             // 
-            // razsoci
+            // txtCustomer
             // 
-            razsoci.Location = new Point(30, 277);
-            razsoci.Name = "razsoci";
-            razsoci.Size = new Size(209, 25);
-            razsoci.TabIndex = 15;
-            razsoci.TextChanged += razsoci_TextChanged;
+            txtCustomer.AnimateReadOnly = false;
+            txtCustomer.BorderStyle = BorderStyle.None;
+            txtCustomer.Depth = 0;
+            txtCustomer.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtCustomer.Hint = "Codigo de Cliente";
+            txtCustomer.LeadingIcon = null;
+            txtCustomer.Location = new Point(37, 33);
+            txtCustomer.MaxLength = 50;
+            txtCustomer.MouseState = MaterialSkin.MouseState.OUT;
+            txtCustomer.Multiline = false;
+            txtCustomer.Name = "txtCustomer";
+            txtCustomer.Size = new Size(173, 50);
+            txtCustomer.TabIndex = 0;
+            txtCustomer.Text = "";
+            txtCustomer.TrailingIcon = null;
             // 
-            // label4
+            // btnSave
             // 
-            label4.AutoSize = true;
-            label4.BackColor = SystemColors.InactiveCaption;
-            label4.Font = new Font("Lucida Fax", 11.25F);
-            label4.Location = new Point(291, 258);
-            label4.Name = "label4";
-            label4.Size = new Size(152, 17);
-            label4.TabIndex = 13;
-            label4.Text = "Correo electrónico:";
+            btnSave.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnSave.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnSave.Depth = 0;
+            btnSave.HighEmphasis = true;
+            btnSave.Icon = null;
+            btnSave.Location = new Point(120, 332);
+            btnSave.Margin = new Padding(4, 6, 4, 6);
+            btnSave.MouseState = MaterialSkin.MouseState.HOVER;
+            btnSave.Name = "btnSave";
+            btnSave.NoAccentTextColor = Color.Empty;
+            btnSave.Size = new Size(88, 36);
+            btnSave.TabIndex = 4;
+            btnSave.Text = "Guardar";
+            btnSave.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnSave.UseAccentColor = false;
+            btnSave.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // txtName
             // 
-            label3.AutoSize = true;
-            label3.BackColor = SystemColors.InactiveCaption;
-            label3.Font = new Font("Lucida Fax", 11.25F);
-            label3.Location = new Point(30, 126);
-            label3.Name = "label3";
-            label3.Size = new Size(78, 17);
-            label3.TabIndex = 12;
-            label3.Text = "Teléfono:";
+            txtName.AnimateReadOnly = false;
+            txtName.BorderStyle = BorderStyle.None;
+            txtName.Depth = 0;
+            txtName.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtName.Hint = "Nombre";
+            txtName.LeadingIcon = null;
+            txtName.Location = new Point(216, 33);
+            txtName.MaxLength = 50;
+            txtName.MouseState = MaterialSkin.MouseState.OUT;
+            txtName.Multiline = false;
+            txtName.Name = "txtName";
+            txtName.Size = new Size(188, 50);
+            txtName.TabIndex = 1;
+            txtName.Text = "";
+            txtName.TrailingIcon = null;
             // 
-            // nomcomp
+            // materialTextBox2
             // 
-            nomcomp.Location = new Point(291, 79);
-            nomcomp.Name = "nomcomp";
-            nomcomp.Size = new Size(271, 25);
-            nomcomp.TabIndex = 11;
-            nomcomp.TextChanged += nomcomp_TextChanged;
+            materialTextBox2.AnimateReadOnly = false;
+            materialTextBox2.BorderStyle = BorderStyle.None;
+            materialTextBox2.Depth = 0;
+            materialTextBox2.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialTextBox2.Hint = "Teléfono";
+            materialTextBox2.LeadingIcon = null;
+            materialTextBox2.Location = new Point(37, 89);
+            materialTextBox2.MaxLength = 50;
+            materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
+            materialTextBox2.Multiline = false;
+            materialTextBox2.Name = "materialTextBox2";
+            materialTextBox2.Size = new Size(173, 50);
+            materialTextBox2.TabIndex = 15;
+            materialTextBox2.Text = "";
+            materialTextBox2.TrailingIcon = null;
             // 
-            // codprov
+            // materialTextBox3
             // 
-            codprov.Location = new Point(30, 79);
-            codprov.Name = "codprov";
-            codprov.Size = new Size(170, 25);
-            codprov.TabIndex = 10;
-            codprov.TextChanged += codprov_TextChanged;
-            // 
-            // telef
-            // 
-            telef.Location = new Point(30, 145);
-            telef.Name = "telef";
-            telef.Size = new Size(176, 25);
-            telef.TabIndex = 9;
-            telef.TextChanged += telef_TextChanged;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = SystemColors.InactiveCaption;
-            label2.Font = new Font("Lucida Fax", 11.25F);
-            label2.Location = new Point(291, 126);
-            label2.Name = "label2";
-            label2.Size = new Size(85, 17);
-            label2.TabIndex = 8;
-            label2.Text = "Dirección:";
-            // 
-            // ruc1
-            // 
-            ruc1.Location = new Point(30, 211);
-            ruc1.Name = "ruc1";
-            ruc1.Size = new Size(224, 25);
-            ruc1.TabIndex = 7;
-            ruc1.TextChanged += ruc1_TextChanged;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = SystemColors.InactiveCaption;
-            label1.Font = new Font("Lucida Fax", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(291, 60);
-            label1.Name = "label1";
-            label1.Size = new Size(151, 17);
-            label1.TabIndex = 6;
-            label1.Text = "Nombre Completo:";
-            // 
-            // Rub
-            // 
-            Rub.AutoSize = true;
-            Rub.BackColor = SystemColors.InactiveCaption;
-            Rub.Font = new Font("Lucida Fax", 11.25F);
-            Rub.Location = new Point(291, 192);
-            Rub.Name = "Rub";
-            Rub.Size = new Size(54, 17);
-            Rub.TabIndex = 5;
-            Rub.Text = "Rubro";
-            // 
-            // RazSoc
-            // 
-            RazSoc.AutoSize = true;
-            RazSoc.BackColor = SystemColors.InactiveCaption;
-            RazSoc.Font = new Font("Lucida Fax", 11.25F);
-            RazSoc.Location = new Point(30, 258);
-            RazSoc.Name = "RazSoc";
-            RazSoc.Size = new Size(107, 17);
-            RazSoc.TabIndex = 4;
-            RazSoc.Text = "Razon Social:";
-            // 
-            // direc
-            // 
-            direc.Location = new Point(291, 145);
-            direc.Name = "direc";
-            direc.Size = new Size(271, 25);
-            direc.TabIndex = 3;
-            direc.TextChanged += direc_TextChanged;
-            // 
-            // RUCProv
-            // 
-            RUCProv.AutoSize = true;
-            RUCProv.BackColor = SystemColors.InactiveCaption;
-            RUCProv.Font = new Font("Lucida Fax", 11.25F);
-            RUCProv.Location = new Point(30, 192);
-            RUCProv.Name = "RUCProv";
-            RUCProv.Size = new Size(45, 17);
-            RUCProv.TabIndex = 2;
-            RUCProv.Text = "RUC:";
+            materialTextBox3.AnimateReadOnly = false;
+            materialTextBox3.BorderStyle = BorderStyle.None;
+            materialTextBox3.Depth = 0;
+            materialTextBox3.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialTextBox3.Hint = "Teléfono adicional";
+            materialTextBox3.LeadingIcon = null;
+            materialTextBox3.Location = new Point(216, 89);
+            materialTextBox3.MaxLength = 50;
+            materialTextBox3.MouseState = MaterialSkin.MouseState.OUT;
+            materialTextBox3.Multiline = false;
+            materialTextBox3.Name = "materialTextBox3";
+            materialTextBox3.Size = new Size(188, 50);
+            materialTextBox3.TabIndex = 16;
+            materialTextBox3.Text = "";
+            materialTextBox3.TrailingIcon = null;
             // 
             // ProviderMaintainer_1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(620, 410);
-            Controls.Add(groupBox1);
+            BackColor = SystemColors.ButtonHighlight;
+            ClientSize = new Size(445, 410);
+            Controls.Add(product);
             FormBorderStyle = FormBorderStyle.None;
             Name = "ProviderMaintainer_1";
             Text = "ProviderMaintainer";
             Load += ProviderMaintainer_Load;
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            product.ResumeLayout(false);
+            product.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Label CodPro;
-        private TextBox corelec;
-        private GroupBox groupBox1;
-        private Label RUCProv;
-        private Label RazSoc;
-        private TextBox direc;
-        private TextBox ruc1;
-        private Label label1;
-        private Label Rub;
-        private Label label2;
-        private TextBox telef;
-        private TextBox nomcomp;
-        private TextBox codprov;
-        private Label label4;
-        private Label label3;
-        private TextBox razsoci;
-        private ComboBox rubro1;
-        private DateTimePicker datTimPickProv;
-        private Button btnGrab;
+        private MaterialSkin.Controls.MaterialCard product;
+        private MaterialSkin.Controls.MaterialTextBox materialTextBox3;
+        private MaterialSkin.Controls.MaterialTextBox materialTextBox2;
+        private MaterialSkin.Controls.MaterialTextBox txtCorr;
+        private MaterialSkin.Controls.MaterialComboBox cmbTypeClie;
+        private MaterialSkin.Controls.MaterialTextBox txtDescription;
+        private MaterialSkin.Controls.MaterialLabel lblTitle;
+        private MaterialSkin.Controls.MaterialButton btnCancel;
+        private MaterialSkin.Controls.MaterialTextBox txtCustomer;
+        private MaterialSkin.Controls.MaterialButton btnSave;
+        private MaterialSkin.Controls.MaterialTextBox txtName;
     }
 }
