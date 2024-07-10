@@ -6,7 +6,7 @@ namespace InsanmarTec.Application.Brands
 {
     public class BrandValidator
     {
-        public static ValidationResult Validate(CreateSuppliersDto input)
+        public static ValidationResult Validate(CreateBrandDto input)
         {
             var result = new ValidationResult();
 
@@ -22,17 +22,17 @@ namespace InsanmarTec.Application.Brands
             return result;
         }
 
-        public static ValidationResult Validate(UpdateSuppliersDto input)
+        public static ValidationResult Validate(UpdateBrandDto input)
         {
             var result = new ValidationResult();
             ValidateCommonFields(input.Description, input.Category, result);
             return result;
         }
 
-        internal static object Validate(Suppliers.Dtos.UpdateSuppliersDto input)
+       /* internal static object Validate(Suppliers.Dtos.UpdatDeBrandto input)
         {
             throw new NotImplementedException();
-        }
+        }*/
 
         private static void ValidateCommonFields(
             string description,
